@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f9f5f2">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>ATELIER · Il guardaroba di Sara</title>
+<style>
+:root{--ink:#302a31;--muted:#887c86;--primary:#743f59;--primary-light:#f4eaf0;--stroke:#eadfe4;--bg:#f9f5f2;--card:#fff;--soft:#f3eeeb;--shadow:0 12px 36px rgba(48,33,42,.06);--radius:20px}
+*{box-sizing:border-box}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-size:15px;-webkit-tap-highlight-color:transparent}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.35}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd9aaf;outline-offset:2px}img{display:block;max-width:100%}button{border:0}a{color:var(--primary)}
+.app{width:100%;max-width:1100px;margin:auto;padding:0 26px 46px}.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ede5e2;margin-bottom:22px}.brand{font-family:Georgia,Times,serif;letter-spacing:.09em;font-size:26px;color:#512e41}.brand span{display:block;font:600 9px system-ui;letter-spacing:.22em;color:#9c8993;text-transform:uppercase;margin-bottom:3px}.top-count{font-size:12px;color:#87757f;background:#fff;border:1px solid var(--stroke);padding:9px 12px;border-radius:999px}.view-title{font-family:Georgia,Times,serif;font-size:31px;line-height:1.15;letter-spacing:-.04em;font-weight:400;margin:4px 0 11px}.intro{font-size:13px;color:var(--muted);line-height:1.55;margin:0 0 19px}.eyebrow{font-size:10px;font-weight:800;color:#976b80;text-transform:uppercase;letter-spacing:.17em}
+.desktop-nav{display:flex;align-items:center;gap:8px}.desktop-nav button{border-radius:999px;padding:10px 17px;background:#fff;border:1px solid var(--stroke);color:#816f7a;font-weight:700;font-size:13px}.desktop-nav button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.page[hidden]{display:none!important}
+.look-layout{display:grid;grid-template-columns:minmax(0,1fr) 295px;gap:23px;align-items:start}.main-look{min-width:0}.control-panel{grid-column:2;grid-row:1 / span 2;position:sticky;top:16px}.main-look{grid-column:1;grid-row:1 / span 2}
+.promo{border-radius:24px;background:linear-gradient(130deg,#874d69 0%,#63394d 80%);padding:22px;color:#fff;display:flex;flex-direction:column;gap:14px;box-shadow:0 15px 32px #743f5924}.promo h2{font-family:Georgia,serif;font-size:28px;font-weight:400;margin:0}.promo p{font-size:12px;line-height:1.55;color:#f5dce8;margin:0}.btn-primary{width:100%;border-radius:15px;background:#fff;color:#65344c;font-weight:800;padding:15px 16px;font-size:16px;min-height:52px;box-shadow:0 4px 12px #28101d1a;display:flex;align-items:center;justify-content:center;gap:9px}.btn-primary:hover{background:#fcf3f7}.heart{background:#fff2;border:1px solid #fff5;border-radius:15px;color:#fff;font-size:14px;font-weight:700;padding:13px 12px}.heart:hover{background:#fff3}
+.filters{display:grid;gap:12px;background:#fff;border:1px solid var(--stroke);border-radius:21px;padding:17px;margin-top:15px;box-shadow:var(--shadow)}.filter-row{display:grid;gap:7px}.filter-row label{font-size:11px;color:#725e6a;font-weight:750}.filter-row select{appearance:none;display:block;width:100%;color:var(--ink);border:1px solid var(--stroke);border-radius:12px;padding:13px 38px 13px 13px;min-height:47px;background:#fbf9f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Cpath stroke='%23734d60' stroke-width='2' fill='none' d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 11px center/17px no-repeat}
+.tiny-help{color:var(--muted);font-size:11px;line-height:1.55;background:#f7f3f3;border:1px solid var(--stroke);border-radius:14px;padding:13px;margin-top:15px}
+.look-banner{background:#fff;border:1px solid var(--stroke);border-radius:20px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);display:flex;gap:16px;justify-content:space-between;align-items:center}.look-banner h2{font-family:Georgia,serif;font-size:23px;font-weight:400;margin:5px 0}.look-banner p{font-size:12px;line-height:1.55;color:var(--muted);margin:0}.quality{display:inline-flex;font-size:11px;background:#f7eff2;color:#7c5269;border-radius:999px;padding:8px 10px;white-space:nowrap}
+.look-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.garment{min-width:0;background:#fff;border:1px solid var(--stroke);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.garment-head{padding:13px 13px 10px;display:flex;align-items:center;justify-content:space-between;gap:4px}.garment-head span:first-child{font-weight:800;color:#64445b;font-size:11px}.garment-head span:last-child{font-size:10px;color:#a08896;text-align:right;white-space:nowrap}.garment-photo{background:#f2edeb;display:flex;align-items:center;justify-content:center;overflow:hidden;aspect-ratio:4/4.6;margin:0 10px;border-radius:11px}.garment-photo img{width:100%;height:100%;object-fit:contain}.no-jacket{color:#ab99a3;display:flex;flex-direction:column;gap:8px;align-items:center;font-size:13px}.no-jacket span{font-size:31px}.garment-name{font-size:12px;font-weight:700;text-align:center;padding:11px 8px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.garment-controls{display:flex;align-items:center;justify-content:space-between;padding:6px 10px 13px;gap:8px}.arrow{width:43px;height:43px;border:1px solid var(--stroke);color:var(--primary);background:#faf7f7;font-size:26px;border-radius:13px;line-height:1}.arrow:hover:not(:disabled){background:#f7e9f0}.garment-index{font-size:11px;color:#8c7a85;font-variant-numeric:tabular-nums}
+.section-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:12px 0 16px}.section-top h2{font-size:23px;font-family:Georgia,serif;font-weight:400;margin:0}.section-top small{color:var(--muted);font-size:12px}.closet-controls{display:flex;gap:10px;margin-bottom:16px}.closet-controls input{flex:1;min-width:0;border:1px solid var(--stroke);border-radius:12px;padding:13px;background:#fff}.closet-controls select{max-width:44%;border:1px solid var(--stroke);border-radius:12px;padding:12px 7px;background:#fff}.closet-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.closet-tile{padding:0;text-align:left;color:inherit;background:#fff;border:1px solid var(--stroke);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);min-width:0}.closet-thumb{aspect-ratio:4/4.8;background:var(--soft)}.closet-thumb img{width:100%;height:100%;object-fit:contain}.closet-meta{padding:10px 10px 13px}.closet-meta strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}.closet-meta small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.favorite-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.favorite-card{background:#fff;border-radius:18px;border:1px solid var(--stroke);padding:12px;min-width:0}.favorite-images{height:125px;background:#f5f0ee;display:flex;border-radius:11px;overflow:hidden}.favorite-images img{width:25%;object-fit:contain}.fav-text{margin-top:10px}.fav-text strong{font-size:13px;display:block}.fav-text small{font-size:11px;display:block;margin-top:3px;color:var(--muted)}.fav-actions{margin-top:10px;display:flex;gap:7px}.btn{padding:11px;border-radius:10px;font-weight:700;font-size:12px}.btn-secondary{background:#f3e8ee;color:#71445b}.btn-quiet{background:#f8f5f4;color:#84727e}.empty{border:1px dashed #d7c4ce;background:#fff;border-radius:18px;padding:30px 20px;color:var(--muted);line-height:1.6;grid-column:1/-1}.backup{margin-top:18px;background:#fff;border:1px solid var(--stroke);padding:15px;border-radius:15px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.backup p{margin:0;flex:1;min-width:180px;font-size:11px;line-height:1.5;color:var(--muted)}.restore-label{cursor:pointer;font-size:12px;color:var(--primary);font-weight:750;padding:9px;border-radius:10px;border:1px solid var(--stroke)}.restore-label input{display:none}
+.bottom-nav{display:none}dialog{border:0;border-radius:22px;width:min(520px,calc(100vw - 24px));max-height:92dvh;overflow:auto;padding:22px;box-shadow:0 20px 80px #251b2755;color:var(--ink)}dialog::backdrop{background:#271b26b3}dialog h2{margin:0 0 8px;font:27px Georgia,serif}dialog p{font-size:12px;line-height:1.6;color:var(--muted)}.dialog-img{width:100%;height:175px;object-fit:contain;background:#f2edeb;border-radius:12px}.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}.edit-grid .wide{grid-column:1/-1}.edit-grid label{font-size:10px;color:#806b79;font-weight:800;display:grid;gap:6px}.edit-grid input,.edit-grid select{width:100%;min-width:0;background:#fff;border:1px solid var(--stroke);padding:11px;border-radius:11px;color:var(--ink);font-size:13px}.edit-actions{display:flex;justify-content:flex-end;gap:10px}.edit-actions button{padding:13px 17px;border-radius:12px;font-weight:750}.save-edit{background:var(--primary);color:#fff}.cancel-edit{background:#f1e9ec;color:var(--ink)}.toast{position:fixed;left:50%;transform:translateX(-50%) translateY(20px);bottom:26px;z-index:20;border-radius:14px;background:#3a2b35;color:white;font-size:12px;padding:13px 18px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;max-width:calc(100vw - 36px);text-align:center}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:750px){
+.app{padding:0 14px calc(98px + env(safe-area-inset-bottom))}.topbar{height:66px;margin-bottom:14px}.brand{font-size:24px}.brand span{font-size:9px}.top-count{font-size:11px;padding:8px 9px}.desktop-nav{display:none}.view-title{font-size:27px;margin:2px 0 8px}.intro{font-size:12px;margin-bottom:12px}.look-layout{display:flex;flex-direction:column;gap:12px}.control-panel{display:contents}.promo{order:0;width:100%;border-radius:19px;padding:15px 16px;gap:12px;box-shadow:none}.promo h2{font-size:23px}.promo p{font-size:11px}.promo-actions{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:9px}.btn-primary{min-height:53px;font-size:17px}.heart{padding:12px 10px;font-size:13px}.filters{order:1;width:100%;margin:0;padding:11px 12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;border-radius:16px}.filter-row{gap:5px;min-width:0}.filter-row label{font-size:9px}.filter-row select{width:100%;font-size:11px;min-height:43px;padding:11px 20px 11px 8px;background-position:right 4px center;background-size:14px;border-radius:10px}.tiny-help{display:none}.main-look{order:2;width:100%}.look-banner{display:block;padding:13px 14px;margin:0 0 12px;border-radius:17px}.look-banner h2{font-size:20px;margin:3px 0 4px}.look-banner p{font-size:11px;line-height:1.4}.quality{font-size:10px;padding:6px 9px;margin-top:9px}.look-grid{gap:10px}.garment{border-radius:16px}.garment-head{padding:10px 9px 8px}.garment-head span:first-child{font-size:10px}.garment-head span:last-child{font-size:9px}.garment-photo{margin:0 7px;aspect-ratio:4/4.7;border-radius:9px}.garment-name{font-size:11px;padding:9px 6px 3px}.garment-controls{padding:5px 7px 10px;gap:4px}.arrow{width:40px;height:40px;font-size:25px;border-radius:11px}.garment-index{font-size:10px}.bottom-nav{position:fixed;display:grid;grid-template-columns:repeat(3,1fr);bottom:0;left:0;right:0;z-index:9;background:rgba(255,255,255,.97);border-top:1px solid #e9dee4;backdrop-filter:blur(14px);padding:7px 10px calc(7px + env(safe-area-inset-bottom));box-shadow:0 -8px 22px #392a3710}.bottom-nav button{border-radius:11px;background:transparent;color:#98848e;display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px;font-size:10px;font-weight:750;min-height:49px}.bottom-nav button span{font-size:20px;line-height:1.25}.bottom-nav button.active{color:var(--primary);background:var(--primary-light)}.closet-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.section-top h2{font-size:22px}.closet-controls{gap:7px}.closet-controls input,.closet-controls select{font-size:12px}.favorite-grid{grid-template-columns:1fr}.favorite-images{height:150px}.backup{flex-direction:column;align-items:stretch}.toast{bottom:calc(79px + env(safe-area-inset-bottom))}
+}
+@media(max-width:365px){.app{padding-inline:9px}.look-grid{gap:7px}.garment-head span:last-child{font-size:8px}.garment-controls{padding:4px 5px 9px}.arrow{width:36px;height:38px}.filters{padding:9px;gap:5px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
+<meta name="apple-mobile-web-app-title" content="ATELIER Sara">
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+ <div class="brand"><span>Il guardaroba di Sara</span>ATELIER</div>
+ <nav class="desktop-nav" aria-label="Navigazione">
+  <button data-nav="look" class="active">✦ VESTIMI</button><button data-nav="closet">Guardaroba</button><button data-nav="saved">Preferiti</button>
+ </nav>
+ <span class="top-count" id="headerCount">89 capi reali</span>
+</header>
+<section id="page-look" class="page">
+ <h1 class="view-title">Cosa mi metto oggi?</h1>
+ <p class="intro">Abbinamenti scelti tra i vestiti di Sara. Premi VESTIMI per un look nuovo.</p>
+ <div class="look-layout">
+  <aside class="control-panel">
+   <div class="promo"><div><h2>Pronta in un tocco.</h2><p>Un outfit completo, non sempre gli stessi capi.</p></div>
+    <div class="promo-actions"><button id="btnDressMe" class="btn-primary">✦ VESTIMI</button><button id="saveBtn" class="heart">♡ Salva look</button></div>
+   </div>
+   <div class="filters">
+    <div class="filter-row"><label for="occasion">OCCASIONE</label><select id="occasion"><option>Tutte</option><option>Casual</option><option>Ufficio</option><option>Elegante</option><option>Sportivo</option></select></div>
+    <div class="filter-row"><label for="season">STAGIONE</label><select id="season"><option>Tutte</option><option>Primavera/Estate</option><option>Autunno/Inverno</option></select></div>
+    <div class="filter-row"><label for="lookMode">TIPO</label><select id="lookMode"><option value="auto">Tutti i look</option><option value="separates">Capi separati</option><option value="dress">Solo vestito</option></select></div>
+   </div>
+   <div class="tiny-help">Le frecce mostrano soltanto alternative dello stesso tipo compatibili con il look scelto. Puoi anche scorrere il capo lateralmente con un dito.</div>
+  </aside>
+  <div class="main-look">
+   <div class="look-banner"><div><span class="eyebrow">IL LOOK SELEZIONATO</span><h2 id="profileName">Pronta</h2><p id="lookReason"></p></div><span id="profileInfo" class="quality">Abbinamento</span></div>
+   <div id="lookGrid" class="look-grid"></div>
+  </div>
+ </div>
+</section>
+<section id="page-closet" class="page" hidden>
+ <div class="section-top"><div><span class="eyebrow">ARCHIVIO REALE</span><h2>Il guardaroba</h2></div><small id="closetCount">89 capi</small></div>
+ <p class="intro">Tocca un capo per correggere colore, tipo, stagione e tag. Le modifiche vengono conservate su questo dispositivo.</p>
+ <div class="closet-controls"><input id="closetSearch" type="search" placeholder="Cerca un capo…" aria-label="Cerca un capo"><select id="closetFilter" aria-label="Filtra per categoria"><option value="all">Tutte</option><option value="top">Top</option><option value="bottom">Pantaloni / gonne</option><option value="outer">Giacche</option><option value="shoes">Scarpe</option><option value="dress">Vestiti</option></select></div>
+ <div id="closetGrid" class="closet-grid"></div>
+ <div class="backup"><p><strong>Backup dei tag e dei preferiti.</strong> Utile quando cambi iPhone o usi una nuova versione dell'app. Le foto sono già incorporate nell'HTML.</p><button id="backupBtn" class="btn btn-secondary">Esporta backup</button><label class="restore-label">Importa backup <input id="restoreFile" type="file" accept="application/json,.json"></label></div>
+</section>
+<section id="page-saved" class="page" hidden><div class="section-top"><div><span class="eyebrow">I TUOI PREFERITI</span><h2>Look salvati</h2></div><small id="savedCount">0 look</small></div><p class="intro">Gli abbinamenti che ti piacciono, pronti da ritrovare.</p><div id="savedGrid" class="favorite-grid"></div></section>
+</div>
+<nav class="bottom-nav" aria-label="Navigazione principale">
+ <button data-nav="look" class="active"><span>✦</span>VESTIMI</button><button data-nav="closet"><span>▦</span>Guardaroba</button><button data-nav="saved"><span>♡</span>Preferiti</button>
+</nav>
+<dialog id="editor" aria-labelledby="dialogHeading">
+ <h2 id="dialogHeading">Modifica il capo</h2><p>Tipo, colore, fantasia e stagione influenzano gli abbinamenti; i tag extra aiutano nella ricerca.</p>
+ <img id="dialogImage" class="dialog-img" alt="Capo selezionato">
+ <div class="edit-grid">
+  <label class="wide">NOME DEL CAPO<input id="dialogName" maxlength="100"></label>
+  <label>CATEGORIA<select id="dialogCategory"><option value="top">Top</option><option value="bottom">Pantaloni / gonne</option><option value="outer">Giacche</option><option value="shoes">Scarpe</option><option value="dress">Vestiti</option></select></label>
+  <label>TIPO<select id="dialogSubtype"></select></label>
+  <label>COLORE<select id="dialogColor"><option>nero</option><option>bianco</option><option>grigio</option><option>beige</option><option>marrone</option><option>blu</option><option>denim</option><option>verde</option><option>rosso</option><option>rosa</option><option>giallo</option><option>viola</option><option>altro</option></select></label>
+  <label>STAGIONE<select id="dialogSeason"><option>Tutte</option><option>Primavera/Estate</option><option>Autunno/Inverno</option></select></label>
+  <label>OCCASIONE<select id="dialogOccasion"><option>Tutte</option><option>Casual</option><option>Ufficio</option><option>Elegante</option><option>Sportivo</option></select></label>
+  <label>FANTASIA<select id="dialogPattern"><option>Tinta unita</option><option>Fantasia</option></select></label>
+  <label class="wide">TAG EXTRA SEPARATI DA VIRGOLA<input id="dialogTags" placeholder="maglioncino, sottogiacca, morbido"></label>
+ </div>
+ <div class="edit-actions"><button id="editCancel" class="cancel-edit" type="button">Annulla</button><button id="editSave" class="save-edit" type="button">Salva</button></div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="application/json" id="closet-data">[{"id":"closet-0","type":"top","subtype":"shirt","name":"Camicia 1 · 0814","color":"grigio","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-000.webp","source":"CAMICE/IMG_0814.HEIC","sourceFile":"IMG_0814.HEIC","description":"Camice"},{"id":"closet-1","type":"top","subtype":"shirt","name":"Camicia 2 · 0815","color":"blu","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-001.webp","source":"CAMICE/IMG_0815.HEIC","sourceFile":"IMG_0815.HEIC","description":"Camice"},{"id":"closet-2","type":"top","subtype":"shirt","name":"Camicia 3 · 0873","color":"marrone","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-002.webp","source":"CAMICE/IMG_0873.HEIC","sourceFile":"IMG_0873.HEIC","description":"Camice"},{"id":"closet-3","type":"top","subtype":"shirt","name":"Camicia 4 · 0874","color":"blu","occasion":"Ufficio","season":"Tutte","pattern":"Fantasia","image":"assets/capo-003.webp","source":"CAMICE/IMG_0874.HEIC","sourceFile":"IMG_0874.HEIC","description":"Camice"},{"id":"closet-4","type":"top","subtype":"shirt","name":"Camicia 5 · 0875","color":"blu","occasion":"Ufficio","season":"Tutte","pattern":"Fantasia","image":"assets/capo-004.webp","source":"CAMICE/IMG_0875.HEIC","sourceFile":"IMG_0875.HEIC","description":"Camice"},{"id":"closet-5","type":"top","subtype":"shirt","name":"Camicia 6 · 0876","color":"grigio","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-005.webp","source":"CAMICE/IMG_0876.HEIC","sourceFile":"IMG_0876.HEIC","description":"Camice"},{"id":"closet-6","type":"outer","subtype":"blazer","name":"Giacca 1 · 0817","color":"rosso","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-006.webp","source":"GIACCHE/IMG_0817.HEIC","sourceFile":"IMG_0817.HEIC","description":"Giacche"},{"id":"closet-7","type":"outer","subtype":"blazer","name":"Giacca 2 · 0866","color":"marrone","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-007.webp","source":"GIACCHE/IMG_0866.HEIC","sourceFile":"IMG_0866.HEIC","description":"Giacche"},{"id":"closet-8","type":"outer","subtype":"blazer","name":"Giacca 3 · 0867","color":"marrone","occasion":"Ufficio","season":"Tutte","pattern":"Fantasia","image":"assets/capo-008.webp","source":"GIACCHE/IMG_0867.HEIC","sourceFile":"IMG_0867.HEIC","description":"Giacche"},{"id":"closet-9","type":"outer","subtype":"blazer","name":"Giacca 4 · 0868","color":"grigio","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-009.webp","source":"GIACCHE/IMG_0868.HEIC","sourceFile":"IMG_0868.HEIC","description":"Giacche"},{"id":"closet-10","type":"outer","subtype":"blazer","name":"Giacca 5 · 0870","color":"marrone","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-010.webp","source":"GIACCHE/IMG_0870.HEIC","sourceFile":"IMG_0870.HEIC","description":"Giacche"},{"id":"closet-11","type":"outer","subtype":"blazer","name":"Giacca 6 · 0871","color":"blu","occasion":"Ufficio","season":"Tutte","pattern":"Fantasia","image":"assets/capo-011.webp","source":"GIACCHE/IMG_0871.HEIC","sourceFile":"IMG_0871.HEIC","description":"Giacche"},{"id":"closet-12","type":"outer","subtype":"blazer","name":"Giacca 7 · 0872","color":"grigio","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-012.webp","source":"GIACCHE/IMG_0872.HEIC","sourceFile":"IMG_0872.HEIC","description":"Giacche"},{"id":"closet-13","type":"top","subtype":"tee","name":"Maglia 1 · 0818","color":"marrone","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-013.webp","source":"MAGLIETTE/IMG_0818.HEIC","sourceFile":"IMG_0818.HEIC","description":"Magliette"},{"id":"closet-14","type":"top","subtype":"tee","name":"Maglia 2 · 0819","color":"grigio","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-014.webp","source":"MAGLIETTE/IMG_0819.HEIC","sourceFile":"IMG_0819.HEIC","description":"Magliette"},{"id":"closet-15","type":"top","subtype":"tee","name":"Maglia 3 · 0859","color":"rosso","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-015.webp","source":"MAGLIETTE/IMG_0859.HEIC","sourceFile":"IMG_0859.HEIC","description":"Magliette"},{"id":"closet-16","type":"top","subtype":"tee","name":"Maglia 4 · 0860","color":"nero","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-016.webp","source":"MAGLIETTE/IMG_0860.heic","sourceFile":"IMG_0860.heic","description":"Magliette"},{"id":"closet-17","type":"top","subtype":"tee","name":"Maglia 5 · 0861","color":"marrone","occasion":"Casual","season":"Tutte","pattern":"Fantasia","image":"assets/capo-017.webp","source":"MAGLIETTE/IMG_0861.heic","sourceFile":"IMG_0861.heic","description":"Magliette"},{"id":"closet-18","type":"top","subtype":"tee","name":"Maglia 6 · 0877","color":"rosa","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-018.webp","source":"MAGLIETTE/IMG_0877.HEIC","sourceFile":"IMG_0877.HEIC","description":"Magliette"},{"id":"closet-19","type":"top","subtype":"tee","name":"Maglia 7 · 0878","color":"blu","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-019.webp","source":"MAGLIETTE/IMG_0878.HEIC","sourceFile":"IMG_0878.HEIC","description":"Magliette"},{"id":"closet-20","type":"top","subtype":"tee","name":"Maglia 8 · 0879","color":"nero","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-020.webp","source":"MAGLIETTE/IMG_0879.HEIC","sourceFile":"IMG_0879.HEIC","description":"Magliette"},{"id":"closet-21","type":"top","subtype":"tee","name":"Maglia 9 · 0880","color":"nero","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-021.webp","source":"MAGLIETTE/IMG_0880.HEIC","sourceFile":"IMG_0880.HEIC","description":"Magliette"},{"id":"closet-22","type":"top","subtype":"tee","name":"Maglia 10 · 0881","color":"grigio","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-022.webp","source":"MAGLIETTE/IMG_0881.HEIC","sourceFile":"IMG_0881.HEIC","description":"Magliette"},{"id":"closet-23","type":"top","subtype":"tee","name":"Maglia 11 · 0882","color":"grigio","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-023.webp","source":"MAGLIETTE/IMG_0882.HEIC","sourceFile":"IMG_0882.HEIC","description":"Magliette"},{"id":"closet-24","type":"top","subtype":"tee","name":"Maglia 12 · 0885","color":"marrone","occasion":"Casual","season":"Tutte","pattern":"Fantasia","image":"assets/capo-024.webp","source":"MAGLIETTE/IMG_0885.HEIC","sourceFile":"IMG_0885.HEIC","description":"Magliette"},{"id":"closet-25","type":"top","subtype":"tee","name":"Maglia 13 · 0886","color":"grigio","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-025.webp","source":"MAGLIETTE/IMG_0886.HEIC","sourceFile":"IMG_0886.HEIC","description":"Magliette"},{"id":"closet-26","type":"top","subtype":"knit","name":"Maglione 1 · 0813","color":"nero","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-026.webp","source":"MAGLIONI_CARDIGAN/IMG_0813.HEIC","sourceFile":"IMG_0813.HEIC","description":"Maglioni Cardigan"},{"id":"closet-27","type":"top","subtype":"knit","name":"Maglione 2 · 0816","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-027.webp","source":"MAGLIONI_CARDIGAN/IMG_0816.HEIC","sourceFile":"IMG_0816.HEIC","description":"Maglioni Cardigan"},{"id":"closet-28","type":"top","subtype":"knit","name":"Maglione 3 · 0844","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Fantasia","image":"assets/capo-028.webp","source":"MAGLIONI_CARDIGAN/IMG_0844.heic","sourceFile":"IMG_0844.heic","description":"Maglioni Cardigan"},{"id":"closet-29","type":"top","subtype":"knit","name":"Maglione 4 · 0845","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-029.webp","source":"MAGLIONI_CARDIGAN/IMG_0845.heic","sourceFile":"IMG_0845.heic","description":"Maglioni Cardigan"},{"id":"closet-30","type":"top","subtype":"knit","name":"Maglione 5 · 0846","color":"nero","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-030.webp","source":"MAGLIONI_CARDIGAN/IMG_0846.heic","sourceFile":"IMG_0846.heic","description":"Maglioni Cardigan"},{"id":"closet-31","type":"top","subtype":"knit","name":"Maglione 6 · 0847","color":"giallo","occasion":"Casual","season":"Autunno/Inverno","pattern":"Fantasia","image":"assets/capo-031.webp","source":"MAGLIONI_CARDIGAN/IMG_0847.heic","sourceFile":"IMG_0847.heic","description":"Maglioni Cardigan"},{"id":"closet-32","type":"top","subtype":"knit","name":"Maglione 7 · 0848","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Fantasia","image":"assets/capo-032.webp","source":"MAGLIONI_CARDIGAN/IMG_0848.HEIC","sourceFile":"IMG_0848.HEIC","description":"Maglioni Cardigan"},{"id":"closet-33","type":"top","subtype":"knit","name":"Maglione 8 · 0849","color":"rosso","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-033.webp","source":"MAGLIONI_CARDIGAN/IMG_0849.HEIC","sourceFile":"IMG_0849.HEIC","description":"Maglioni Cardigan"},{"id":"closet-34","type":"top","subtype":"knit","name":"Maglione 9 · 0850","color":"grigio","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-034.webp","source":"MAGLIONI_CARDIGAN/IMG_0850.HEIC","sourceFile":"IMG_0850.HEIC","description":"Maglioni Cardigan"},{"id":"closet-35","type":"top","subtype":"knit","name":"Maglione 10 · 0851","color":"nero","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-035.webp","source":"MAGLIONI_CARDIGAN/IMG_0851.HEIC","sourceFile":"IMG_0851.HEIC","description":"Maglioni Cardigan"},{"id":"closet-36","type":"top","subtype":"knit","name":"Maglione 11 · 0853","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-036.webp","source":"MAGLIONI_CARDIGAN/IMG_0853.HEIC","sourceFile":"IMG_0853.HEIC","description":"Maglioni Cardigan"},{"id":"closet-37","type":"top","subtype":"knit","name":"Maglione 12 · 0854","color":"rosso","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-037.webp","source":"MAGLIONI_CARDIGAN/IMG_0854.heic","sourceFile":"IMG_0854.heic","description":"Maglioni Cardigan"},{"id":"closet-38","type":"top","subtype":"knit","name":"Maglione 13 · 0855","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-038.webp","source":"MAGLIONI_CARDIGAN/IMG_0855.HEIC","sourceFile":"IMG_0855.HEIC","description":"Maglioni Cardigan"},{"id":"closet-39","type":"top","subtype":"knit","name":"Maglione 14 · 0856","color":"grigio","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-039.webp","source":"MAGLIONI_CARDIGAN/IMG_0856.HEIC","sourceFile":"IMG_0856.HEIC","description":"Maglioni Cardigan"},{"id":"closet-40","type":"top","subtype":"knit","name":"Maglione 15 · 0857","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Fantasia","image":"assets/capo-040.webp","source":"MAGLIONI_CARDIGAN/IMG_0857.heic","sourceFile":"IMG_0857.heic","description":"Maglioni Cardigan"},{"id":"closet-41","type":"top","subtype":"knit","name":"Maglione 16 · 0858","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Fantasia","image":"assets/capo-041.webp","source":"MAGLIONI_CARDIGAN/IMG_0858.HEIC","sourceFile":"IMG_0858.HEIC","description":"Maglioni Cardigan"},{"id":"closet-42","type":"top","subtype":"knit","name":"Maglione 17 · 0864","color":"giallo","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-042.webp","source":"MAGLIONI_CARDIGAN/IMG_0864.HEIC","sourceFile":"IMG_0864.HEIC","description":"Maglioni Cardigan"},{"id":"closet-43","type":"top","subtype":"knit","name":"Maglione 18 · 0865","color":"marrone","occasion":"Casual","season":"Autunno/Inverno","pattern":"Fantasia","image":"assets/capo-043.webp","source":"MAGLIONI_CARDIGAN/IMG_0865.HEIC","sourceFile":"IMG_0865.HEIC","description":"Maglioni Cardigan"},{"id":"closet-44","type":"top","subtype":"knit","name":"Maglione 19 · 0883","color":"blu","occasion":"Casual","season":"Autunno/Inverno","pattern":"Fantasia","image":"assets/capo-044.webp","source":"MAGLIONI_CARDIGAN/IMG_0883.HEIC","sourceFile":"IMG_0883.HEIC","description":"Maglioni Cardigan"},{"id":"closet-45","type":"top","subtype":"knit","name":"Maglione 20 · 0884","color":"grigio","occasion":"Casual","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-045.webp","source":"MAGLIONI_CARDIGAN/IMG_0884.HEIC","sourceFile":"IMG_0884.HEIC","description":"Maglioni Cardigan"},{"id":"closet-46","type":"bottom","subtype":"skirt","name":"Gonna 1 · 0841","color":"nero","occasion":"Elegante","season":"Primavera/Estate","pattern":"Tinta unita","image":"assets/capo-046.webp","source":"PANTALONI_JEANS_GONNE/GONNE/IMG_0841.HEIC","sourceFile":"IMG_0841.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-47","type":"bottom","subtype":"skirt","name":"Gonna 2 · 0842","color":"blu","occasion":"Elegante","season":"Primavera/Estate","pattern":"Tinta unita","image":"assets/capo-047.webp","source":"PANTALONI_JEANS_GONNE/GONNE/IMG_0842.HEIC","sourceFile":"IMG_0842.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-48","type":"bottom","subtype":"jeans","name":"Jeans 1 · 0808","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-048.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0808.HEIC","sourceFile":"IMG_0808.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-49","type":"bottom","subtype":"jeans","name":"Jeans 2 · 0810","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-049.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0810.HEIC","sourceFile":"IMG_0810.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-50","type":"bottom","subtype":"jeans","name":"Jeans 3 · 0811","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-050.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0811.HEIC","sourceFile":"IMG_0811.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-51","type":"bottom","subtype":"jeans","name":"Jeans 4 · 0824","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-051.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0824.HEIC","sourceFile":"IMG_0824.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-52","type":"bottom","subtype":"jeans","name":"Jeans 5 · 0825","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-052.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0825.heic","sourceFile":"IMG_0825.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-53","type":"bottom","subtype":"jeans","name":"Jeans 6 · 0826","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-053.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0826.heic","sourceFile":"IMG_0826.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-54","type":"bottom","subtype":"jeans","name":"Jeans 7 · 0827","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-054.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0827.heic","sourceFile":"IMG_0827.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-55","type":"bottom","subtype":"jeans","name":"Jeans 8 · 0828","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-055.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0828.heic","sourceFile":"IMG_0828.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-56","type":"bottom","subtype":"jeans","name":"Jeans 9 · 0829","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-056.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0829.heic","sourceFile":"IMG_0829.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-57","type":"bottom","subtype":"jeans","name":"Jeans 10 · 0830","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-057.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0830.heic","sourceFile":"IMG_0830.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-58","type":"bottom","subtype":"jeans","name":"Jeans 11 · 0831","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-058.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0831.heic","sourceFile":"IMG_0831.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-59","type":"bottom","subtype":"jeans","name":"Jeans 12 · 0832","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-059.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0832.heic","sourceFile":"IMG_0832.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-60","type":"bottom","subtype":"jeans","name":"Jeans 13 · 0833","color":"denim","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-060.webp","source":"PANTALONI_JEANS_GONNE/JEANS/IMG_0833.heic","sourceFile":"IMG_0833.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-61","type":"bottom","subtype":"tailored","name":"Pantaloni 1 · 0812","color":"nero","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-061.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0812.HEIC","sourceFile":"IMG_0812.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-62","type":"bottom","subtype":"tailored","name":"Pantaloni 2 · 0834","color":"nero","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-062.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0834.heic","sourceFile":"IMG_0834.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-63","type":"bottom","subtype":"tailored","name":"Pantaloni 3 · 0835","color":"marrone","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-063.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0835.heic","sourceFile":"IMG_0835.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-64","type":"bottom","subtype":"tailored","name":"Pantaloni 4 · 0836","color":"marrone","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-064.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0836.HEIC","sourceFile":"IMG_0836.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-65","type":"bottom","subtype":"tailored","name":"Pantaloni 5 · 0837","color":"grigio","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-065.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0837.heic","sourceFile":"IMG_0837.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-66","type":"bottom","subtype":"tailored","name":"Pantaloni 6 · 0838","color":"blu","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-066.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0838.heic","sourceFile":"IMG_0838.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-67","type":"bottom","subtype":"tailored","name":"Pantaloni 7 · 0839","color":"nero","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-067.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0839.heic","sourceFile":"IMG_0839.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-68","type":"bottom","subtype":"tailored","name":"Pantaloni 8 · 0840","color":"blu","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-068.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0840.heic","sourceFile":"IMG_0840.heic","description":"Pantaloni Jeans Gonne"},{"id":"closet-69","type":"bottom","subtype":"tailored","name":"Pantaloni 9 · 0843","color":"marrone","occasion":"Ufficio","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-069.webp","source":"PANTALONI_JEANS_GONNE/PANTALONI/IMG_0843.HEIC","sourceFile":"IMG_0843.HEIC","description":"Pantaloni Jeans Gonne"},{"id":"closet-70","type":"shoes","subtype":"sneakers","name":"Sneakers 1 · 0887","color":"verde","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-070.webp","source":"SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0887.HEIC","sourceFile":"IMG_0887.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-71","type":"shoes","subtype":"sneakers","name":"Sneakers 2 · 0888","color":"grigio","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-071.webp","source":"SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0888.HEIC","sourceFile":"IMG_0888.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-72","type":"shoes","subtype":"sneakers","name":"Sneakers 3 · 0889","color":"grigio","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-072.webp","source":"SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0889.HEIC","sourceFile":"IMG_0889.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-73","type":"shoes","subtype":"sneakers","name":"Sneakers 4 · 0900","color":"marrone","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-073.webp","source":"SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0900.HEIC","sourceFile":"IMG_0900.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-74","type":"shoes","subtype":"sneakers","name":"Sneakers 5 · 0901","color":"marrone","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-074.webp","source":"SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0901.HEIC","sourceFile":"IMG_0901.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-75","type":"shoes","subtype":"sneakers","name":"Sneakers 6 · 0902","color":"grigio","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-075.webp","source":"SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0902.HEIC","sourceFile":"IMG_0902.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-76","type":"shoes","subtype":"sneakers","name":"Sneakers 7 · 0903","color":"marrone","occasion":"Casual","season":"Tutte","pattern":"Tinta unita","image":"assets/capo-076.webp","source":"SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0903.HEIC","sourceFile":"IMG_0903.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-77","type":"shoes","subtype":"boots","name":"Stivali 1 · 0890","color":"blu","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-077.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0890.HEIC","sourceFile":"IMG_0890.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-78","type":"shoes","subtype":"boots","name":"Stivali 2 · 0891","color":"blu","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-078.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0891.HEIC","sourceFile":"IMG_0891.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-79","type":"shoes","subtype":"boots","name":"Stivali 3 · 0892","color":"nero","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-079.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0892.HEIC","sourceFile":"IMG_0892.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-80","type":"shoes","subtype":"boots","name":"Stivali 4 · 0893","color":"blu","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-080.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0893.HEIC","sourceFile":"IMG_0893.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-81","type":"shoes","subtype":"boots","name":"Stivali 5 · 0894","color":"rosso","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-081.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0894.HEIC","sourceFile":"IMG_0894.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-82","type":"shoes","subtype":"boots","name":"Stivali 6 · 0895","color":"nero","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-082.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0895.HEIC","sourceFile":"IMG_0895.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-83","type":"shoes","subtype":"boots","name":"Stivali 7 · 0896","color":"blu","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-083.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0896.HEIC","sourceFile":"IMG_0896.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-84","type":"shoes","subtype":"boots","name":"Stivali 8 · 0897","color":"rosso","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-084.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0897.HEIC","sourceFile":"IMG_0897.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-85","type":"shoes","subtype":"boots","name":"Stivali 9 · 0898","color":"marrone","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-085.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0898.HEIC","sourceFile":"IMG_0898.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-86","type":"shoes","subtype":"boots","name":"Stivali 10 · 0899","color":"blu","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-086.webp","source":"SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0899.HEIC","sourceFile":"IMG_0899.HEIC","description":"Scarpe Sneakers Stivali"},{"id":"closet-87","type":"dress","subtype":"dress","name":"Vestito 1 · 0862","color":"grigio","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-087.webp","source":"VESTITO LUNGO IN MAGLIA/IMG_0862.heic","sourceFile":"IMG_0862.heic","description":"Vestito Lungo In Maglia"},{"id":"closet-88","type":"dress","subtype":"dress","name":"Vestito 2 · 0863","color":"nero","occasion":"Elegante","season":"Autunno/Inverno","pattern":"Tinta unita","image":"assets/capo-088.webp","source":"VESTITO LUNGO IN MAGLIA/IMG_0863.heic","sourceFile":"IMG_0863.heic","description":"Vestito Lungo In Maglia"}]</script>
+<script>'use strict';
+const rawData=JSON.parse(document.getElementById('closet-data').textContent);
+const CATEGORIES={top:'Top',bottom:'Pantaloni e gonne',outer:'Giacche',shoes:'Scarpe',dress:'Vestiti'};
+const SUBTYPES={shirt:'Camicia',tee:'Maglia',knit:'Maglione / cardigan',blazer:'Giacca / blazer',jeans:'Jeans',tailored:'Pantalone',skirt:'Gonna',sneakers:'Sneakers',boots:'Stivale',dress:'Vestito'};
+const COLOR_HEX={nero:'#26262b',bianco:'#f5f5f0',grigio:'#8a898a',beige:'#c9b49c',marrone:'#78583f',blu:'#4b739a',denim:'#6187b4',verde:'#708d65',rosso:'#b64f52',rosa:'#ca8d9f',giallo:'#d7b44f',viola:'#8b6eab',altro:'#c6bfbe'};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const safeStore={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const tryParse=(s,fallback)=>{try{return s?JSON.parse(s):fallback}catch(e){return fallback}};
+const edits=tryParse(safeStore.get('atelier_sara_mobile_tags_v1'),{});
+const data=rawData.map(x=>Object.assign({},x,edits[x.source]||{}, {id:x.id,source:x.source,image:x.image}));
+let favorites=tryParse(safeStore.get('atelier_sara_mobile_faves_v1'),[]);
+const ids=new Map(data.map(it=>[it.id,it]));
+const state={page:'look',occasion:'Tutte',season:'Tutte',mode:'auto',profile:'',look:{top:null,bottom:null,outer:null,shoes:null,dress:null},pool:{},hist:[],itemHist:[],lastProfile:null,poolCache:{},filter:'all',query:'',paletteType:'top',selectedEdit:null};
+const VALID_TYPES={top:['tee','shirt','knit'],bottom:['jeans','tailored','skirt'],outer:['blazer'],shoes:['sneakers','boots'],dress:['dress']};
+const byType=t=>data.filter(x=>x.type===t);
+const find=id=>id?ids.get(id)||null:null;
+const randomOf=arr=>arr[Math.floor(Math.random()*arr.length)];
+const clean=str=>String(str||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const histKey=look=>['top','bottom','dress','shoes','outer'].map(k=>look[k]||'-').join('|');
+function toast(message){const t=$('#toast');t.textContent=message;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),2600)}
+function saveTags(){const changes={};for(const x of data){let orig=rawData.find(r=>r.id===x.id);let sub={};for(const key of ['name','color','season','occasion','pattern','subtype','type','tags']) if(JSON.stringify(x[key])!==JSON.stringify(orig[key]))sub[key]=x[key];if(Object.keys(sub).length) changes[x.source]=sub;}safeStore.set('atelier_sara_mobile_tags_v1',JSON.stringify(changes));}
+function saveFavs(){safeStore.set('atelier_sara_mobile_faves_v1',JSON.stringify(favorites))}
+function allowedProfiles(){
+ if(state.mode==='dress')return ['dress'];
+ if(state.mode==='separates')return state.occasion==='Sportivo'?['sport']:state.occasion==='Ufficio'?['office']:state.occasion==='Elegante'?['polished']:['casual','city','office','polished'];
+ switch(state.occasion){case 'Casual':return ['casual','city'];case 'Ufficio':return ['office'];case 'Elegante':return ['polished','dress'];case 'Sportivo':return ['sport'];default:return ['casual','city','office','polished','dress']}
+}
+const PROFILE={
+ casual:{label:'Casual rilassato',top:['tee','knit'],bottom:['jeans'],shoe:['sneakers'],outerChance:.14},
+ city:{label:'Casual curato',top:['shirt','knit','tee'],bottom:['jeans','tailored'],shoe:['sneakers','boots'],outerChance:.30},
+ office:{label:'Ufficio',top:['shirt','knit'],bottom:['tailored'],shoe:['boots'],outerChance:.47},
+ polished:{label:'Curato / elegante',top:['shirt','knit'],bottom:['tailored','skirt'],shoe:['boots'],outerChance:.37},
+ sport:{label:'Sportivo',top:['tee'],bottom:['jeans'],shoe:['sneakers'],outerChance:0},
+ dress:{label:'Vestito',dress:['dress'],shoe:['boots'],outerChance:.24}
+};
+function seasonOK(it){
+ if(state.season==='Tutte')return true;
+ if(it.season==='Tutte')return !(state.season==='Primavera/Estate' && ['boots'].includes(it.subtype));
+ return it.season===state.season;
+}
+function group(t,allowed){return byType(t).filter(x=>allowed.includes(x.subtype) && seasonOK(x))}
+const neutral=c=>['nero','bianco','grigio','beige','denim'].includes(c);
+function harmony(a,b){
+ if(!a||!b||a==='altro'||b==='altro')return 2;
+ if(a===b)return neutral(a)?6:2;
+ if(neutral(a)||neutral(b))return 5;
+ const k=[a,b].sort().join('|');
+ const good=new Set(['blu|marrone','blu|verde','beige|marrone','marrone|verde','grigio|rosa','blu|rosso','rosa|viola','beige|verde','rosso|verde','giallo|viola']);
+ return good.has(k)?3:-3;
+}
+function hardOK(look,profile){
+ const p=PROFILE[profile];if(!p)return false;
+ const top=find(look.top),bot=find(look.bottom),outer=find(look.outer),shoe=find(look.shoes),dress=find(look.dress);
+ if(!shoe||!p.shoe.includes(shoe.subtype)||!seasonOK(shoe))return false;
+ if(profile==='dress'){
+   if(!dress||!p.dress.includes(dress.subtype)||top||bot)return false;
+ } else {
+   if(!top||!bot||dress)return false;
+   if(!p.top.includes(top.subtype)||!p.bottom.includes(bot.subtype))return false;
+   if(bot.subtype==='skirt' && shoe.subtype==='sneakers')return false;
+ }
+ if(outer && (!p.outerChance||outer.subtype!=='blazer'||!seasonOK(outer)))return false;
+ return [top,bot,outer,shoe,dress].filter(Boolean).every(it=>seasonOK(it));
+}
+function lookScore(look,profile){
+ if(!hardOK(look,profile))return 0;
+ let pts=71;const chosen=[look.top,look.bottom,look.dress,look.shoes,look.outer].map(find).filter(Boolean);
+ const colors=chosen.map(it=>it.color).filter(c=>c!=='altro');
+ const accents=[...new Set(colors.filter(c=>!neutral(c)))];
+ pts += accents.length<=1?8:accents.length===2?3:-8;
+ let pairs=0;for(let i=0;i<colors.length;i++)for(let j=i+1;j<colors.length;j++)pairs+=harmony(colors[i],colors[j]);
+ pts += Math.max(-8,Math.min(9,Math.round(pairs/2.4)));
+ const patterned=chosen.filter(it=>it.pattern==='Fantasia').length;
+ pts += patterned===1?3:patterned>=2?-9:2;
+ const bot=find(look.bottom),top=find(look.top),shoe=find(look.shoes),outer=find(look.outer);
+ if(bot?.subtype==='skirt' && shoe?.subtype==='boots') pts+=5;
+ if(bot?.subtype==='tailored' && top?.subtype==='shirt')pts+=5;
+ if(bot?.subtype==='jeans'&&top?.subtype==='knit')pts+=3;
+ if(outer && top?.subtype==='shirt')pts+=3;
+ if(outer && top?.subtype==='tee' && profile!=='city')pts-=6;
+ if(state.occasion!=='Tutte'){
+   if(profile==='office'&&state.occasion==='Ufficio')pts+=4;
+   if(['dress','polished'].includes(profile)&&state.occasion==='Elegante')pts+=4;
+ }
+ return Math.min(99,Math.max(0,pts));
+}
+function takeOutfit(profile){
+ const p=PROFILE[profile], tops=profile==='dress'?[null]:group('top',p.top), bots=profile==='dress'?[null]:group('bottom',p.bottom), dresses=profile==='dress'?group('dress',p.dress):[null], shoes=group('shoes',p.shoe), jackets=[null,...group('outer',['blazer'])];
+ if(!tops.length||!bots.length||!dresses.length||!shoes.length)return null;
+ const top=randomOf(tops),bot=randomOf(bots),dress=randomOf(dresses),shoe=randomOf(shoes),outer=Math.random()<p.outerChance?randomOf(jackets):null;
+ return {top:top?.id||null,bottom:bot?.id||null,dress:dress?.id||null,shoes:shoe.id,outer:outer?.id||null};
+}
+function topCandidates(){
+ // Variation is deliberate: candidate selection spans several silhouettes, not the same top 24 all the time.
+ let candidates=[];const profiles=allowedProfiles();
+ for(const prof of profiles){for(let k=0;k<90;k++){const look=takeOutfit(prof);if(!look)break;const raw=lookScore(look,prof);if(raw<68)continue;
+    const key=histKey(look);if(state.hist.includes(key))continue;
+    const recent=[...state.itemHist.slice(0,5)].flatMap(i=>[i.top,i.bottom,i.shoes,i.outer,i.dress]).filter(Boolean);
+    const overlaps=[look.top,look.bottom,look.shoes,look.outer,look.dress].filter(id=>id&&recent.includes(id)).length;
+    const immediate=state.itemHist[0];const common=immediate?[look.top,look.bottom,look.shoes,look.outer,look.dress].filter(id=>id&&Object.values(immediate).includes(id)).length:0;
+    const score=raw - overlaps*2.8 - common*4.2 - (state.lastProfile===prof?11:0) + Math.random()*9;
+    candidates.push({look,profile:prof,raw,score,key});
+ }}
+ candidates.sort((a,b)=>b.score-a.score);return candidates;
+}
+function setProfile(profile){state.profile=profile;}
+function produce(){
+ let candidates=topCandidates();
+ if(!candidates.length){state.hist=[];candidates=topCandidates()}
+ if(!candidates.length){state.profile='';state.look={top:null,bottom:null,dress:null,shoes:null,outer:null};refresh();toast('Nessun outfit disponibile con questi filtri. Prova a cambiare stagione o occasione.');return;}
+ // First choose a different *silhouette*; then choose good garments inside it.
+ // This prevents a formal look score from monopolizing every VESTIMI click.
+ const profiles=[...new Set(candidates.map(c=>c.profile))];
+ const alternatives=profiles.filter(p=>p!==state.lastProfile);
+ const selectedProfile=randomOf(alternatives.length?alternatives:profiles);
+ const within=candidates.filter(c=>c.profile===selectedProfile).sort((a,b)=>b.score-a.score);
+ const pick=randomOf(within.slice(0,Math.min(12,within.length)));
+ state.look={...pick.look};state.poolCache={};setProfile(pick.profile);state.lastProfile=pick.profile;
+ state.hist.unshift(pick.key);state.hist=state.hist.slice(0,35);
+ state.itemHist.unshift({...pick.look});state.itemHist=state.itemHist.slice(0,8);
+ refresh();
+ toast('Nuovo outfit: '+PROFILE[pick.profile].label);
+}
+
+function activeTypes(){return state.profile==='dress'?['dress','shoes','outer']:['top','bottom','shoes','outer']}
+function poolFor(type){
+ const prof=state.profile;if(!prof)return [];
+ // Cache alternatives while this slot changes. The other garments define the list.
+ const other=['top','bottom','dress','shoes','outer'].filter(k=>k!==type).map(k=>state.look[k]||'-').join('|');
+ const cacheKey=[prof,type,state.occasion,state.season,other].join(':');
+ if(state.poolCache[cacheKey])return state.poolCache[cacheKey];
+ const p=PROFILE[prof], allow={top:p.top||[],bottom:p.bottom||[],dress:p.dress||[],shoes:p.shoe||[],outer:['blazer']};
+ const choices=(type==='outer'?[null,...group('outer',['blazer'])]:group(type,allow[type]));
+ const current=state.look[type];const base=lookScore(state.look,prof);
+ const all=choices.map(item=>({item,score:lookScore({...state.look,[type]:item?.id||null},prof)}))
+    .filter(x=>x.score>=Math.max(72,base-8));
+ all.sort((a,b)=>b.score-a.score || String(a.item?.id||'').localeCompare(String(b.item?.id||'')));
+ // Shortlist, rather than scrolling the entire category. Keep the original selection.
+ let scored=all.slice(0,7);
+ if(!scored.some(x=>(x.item?.id||null)===(current||null))){
+   const original=all.find(x=>(x.item?.id||null)===(current||null));
+   if(original)scored.push(original);
+   else if(current===null||find(current))scored.push({item:find(current),score:base});
+ }
+ scored.sort((a,b)=>b.score-a.score || String(a.item?.id||'').localeCompare(String(b.item?.id||'')));
+ state.poolCache[cacheKey]=scored;
+ return scored;
+}
+
+function rotate(type,delta){
+ const pool=poolFor(type);if(pool.length<2){toast('Nessun’altra alternativa coerente per questo capo.');return;}
+ const idx=pool.findIndex(x=>(x.item?.id||null)===(state.look[type]||null));
+ const next=pool[((idx<0?0:idx)+delta+pool.length)%pool.length];
+ state.look[type]=next.item?.id||null;
+ refresh();
+}
+function scoreLabel(score){return score>=88?'Molto coerente':score>=79?'Ben abbinato':score>=70?'Buon abbinamento':'Da rivedere'}
+function explain(){
+ const b=find(state.look.bottom),t=find(state.look.top),s=find(state.look.shoes),o=find(state.look.outer);
+ let rationale=[];
+ if(state.profile==='dress')rationale.push('Vestito con stivali');
+ else {
+   if(b?.subtype==='jeans'&&s?.subtype==='sneakers')rationale.push('Denim con sneakers');
+   if(b?.subtype==='skirt'&&s?.subtype==='boots')rationale.push('Gonna con stivali');
+   if(b?.subtype==='tailored'&&t?.subtype==='shirt')rationale.push('Camicia e pantalone sartoriale');
+   if(b?.subtype==='jeans'&&t?.subtype==='knit')rationale.push('Maglia e denim');
+ }
+ if(o)rationale.push('Giacca coordinata');
+ rationale.push('Alternative filtrate per questo stile');
+ return rationale.slice(0,3).join(' · ');
+}
+function imageMarkup(it){return it?`<img src="${it.image}" alt="${clean(it.name)}" draggable="false">`:'<div class="no-jacket"><span>＋</span> Senza giacca</div>'}
+function renderLook(){
+ if(!state.profile){$('#profileName').textContent='Nessun look disponibile';$('#profileInfo').textContent='Cambia i filtri';$('#lookReason').textContent='Non ci sono abbinamenti completi per questa selezione: prova un’altra stagione, occasione o tipologia.';$('#lookGrid').innerHTML='<div class="empty">Non ci sono capi sufficientemente compatibili per generare questo outfit con i filtri selezionati.</div>';return;}
+ const sc=lookScore(state.look,state.profile);
+ $('#profileName').textContent=PROFILE[state.profile].label;
+ $('#profileInfo').textContent='Compatibilità indicativa '+sc+'/100 · '+scoreLabel(sc);
+ $('#lookReason').textContent=explain();
+ const container=$('#lookGrid');
+ container.innerHTML=activeTypes().map(type=>{
+   const it=find(state.look[type]), p=poolFor(type), i=p.findIndex(x=>(x.item?.id||null)===(state.look[type]||null));
+   const count=p.length;
+   return `<article class="garment" data-slot="${type}" tabindex="0" aria-label="${CATEGORIES[type]}">
+     <div class="garment-head"><span>${CATEGORIES[type]}</span><span>${count>1?'✓ '+count+' alternative':'Scelta unica'}</span></div>
+     <div class="garment-photo">${imageMarkup(it)}</div>
+     <div class="garment-name" title="${clean(it?.name||'Senza giacca')}">${clean(it?.name||'Senza giacca')}</div>
+     <div class="garment-controls"><button class="arrow" data-type="${type}" data-step="-1" aria-label="Alternativa precedente per ${CATEGORIES[type]}" ${count<2?'disabled':''}>‹</button><span class="garment-index">${count?i+1:0} / ${count}</span><button class="arrow" data-type="${type}" data-step="1" aria-label="Alternativa successiva per ${CATEGORIES[type]}" ${count<2?'disabled':''}>›</button></div>
+   </article>`;
+ }).join('');
+ container.querySelectorAll('.arrow').forEach(b=>b.onclick=()=>rotate(b.dataset.type,Number(b.dataset.step)));
+ // swipe left/right to change garment (iPhone): control is also available via large arrows.
+ container.querySelectorAll('.garment').forEach(card=>{
+   let x=null,y=null;
+   card.addEventListener('touchstart',e=>{const t=e.touches[0];x=t.clientX;y=t.clientY},{passive:true});
+   card.addEventListener('touchend',e=>{if(x===null)return;const t=e.changedTouches[0],dx=t.clientX-x,dy=t.clientY-y;x=y=null;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5)rotate(card.dataset.slot,dx<0?1:-1)},{passive:true});
+   card.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();rotate(card.dataset.slot,e.key==='ArrowRight'?1:-1)}});
+ });
+}
+function usePage(page){state.page=page;$$('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===page));$$('.page').forEach(el=>el.hidden=el.id!==`page-${page}`);window.scrollTo({top:0,behavior:'instant'});if(page==='closet')renderCloset();if(page==='saved')renderSaved();}
+function renderCloset(){
+ const q=state.query.toLowerCase();
+ const list=data.filter(it=>(state.filter==='all'||it.type===state.filter) && (!q||[it.name,it.source,it.color,it.subtype,...(it.tags||[])].join(' ').toLowerCase().includes(q)));
+ $('#closetCount').textContent=list.length+' capi';
+ $('#closetGrid').innerHTML=list.map(it=>`<button class="closet-tile" data-edit="${it.id}"><div class="closet-thumb"><img src="${it.image}" loading="lazy" alt="${clean(it.name)}"></div><div class="closet-meta"><strong>${clean(it.name)}</strong><small>${SUBTYPES[it.subtype]||CATEGORIES[it.type]} · ${clean(it.color||'non definito')}</small></div></button>`).join('')||'<p class="empty">Nessun capo trovato.</p>';
+ $$('#closetGrid [data-edit]').forEach(b=>b.onclick=()=>editItem(b.dataset.edit));
+}
+function renderSaved(){
+ $('#savedCount').textContent=favorites.length+' look';
+ $('#savedGrid').innerHTML=favorites.length?favorites.map(f=>`<article class="favorite-card"><div class="favorite-images">${[f.look.top,f.look.bottom,f.look.dress,f.look.shoes,f.look.outer].map(find).filter(Boolean).map(it=>`<img src="${it.image}" alt="${clean(it.name)}">`).join('')}</div><div class="fav-text"><strong>${clean(f.title)}</strong><small>${clean(f.label)} · ${clean(f.date)}</small></div><div class="fav-actions"><button data-load="${f.id}" class="btn btn-secondary">Apri look</button><button data-remove="${f.id}" class="btn btn-quiet">Elimina</button></div></article>`).join(''):'<p class="empty">Non hai ancora salvato nessun outfit. Premi VESTIMI e poi il cuore.</p>';
+ $$('#savedGrid [data-load]').forEach(b=>b.onclick=()=>{const f=favorites.find(a=>a.id===b.dataset.load);if(!f)return;state.look={...f.look};state.poolCache={};setProfile(f.profile);state.mode=f.mode||'auto';state.occasion=f.occasion||'Tutte';state.season=f.season||'Tutte';syncControls();usePage('look');refresh()});
+ $$('#savedGrid [data-remove]').forEach(b=>b.onclick=()=>{favorites=favorites.filter(f=>f.id!==b.dataset.remove);saveFavs();renderSaved()});
+}
+function saveCurrent(){if(!state.profile)return;
+ const id='look-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,6);
+ favorites.unshift({id,look:{...state.look},profile:state.profile,mode:state.mode,occasion:state.occasion,season:state.season,label:PROFILE[state.profile].label,title:'Look di Sara',date:new Date().toLocaleDateString('it-IT')});saveFavs();toast('Look aggiunto ai preferiti.');
+}
+function editItem(id){
+ const it=find(id);if(!it)return;
+ state.selectedEdit=id;
+ $('#dialogHeading').textContent='Modifica il capo';
+ $('#dialogImage').src=it.image;$('#dialogName').value=it.name;$('#dialogColor').value=it.color||'altro';$('#dialogSeason').value=it.season;$('#dialogOccasion').value=it.occasion;$('#dialogPattern').value=it.pattern;$('#dialogTags').value=(it.tags||[]).join(', ');
+ $('#dialogCategory').value=it.type;populateSubtype(it.subtype);
+ $('#editor').showModal();
+}
+function populateSubtype(selected){const type=$('#dialogCategory').value;$('#dialogSubtype').innerHTML=(VALID_TYPES[type]||[]).map(k=>`<option value="${k}">${SUBTYPES[k]}</option>`).join('');if(selected&&VALID_TYPES[type]?.includes(selected))$('#dialogSubtype').value=selected;}
+function storeEdit(){const it=find(state.selectedEdit);if(!it)return;
+ it.name=$('#dialogName').value.trim()||it.name;
+ it.type=$('#dialogCategory').value;it.subtype=$('#dialogSubtype').value;
+ it.color=$('#dialogColor').value;it.season=$('#dialogSeason').value;
+ it.occasion=$('#dialogOccasion').value;it.pattern=$('#dialogPattern').value;
+ it.tags=$('#dialogTags').value.split(',').map(s=>s.trim()).filter(Boolean);
+ saveTags();state.poolCache={};$('#editor').close();renderCloset();toast('Tag salvati in questo browser.');
+ // Current look may no longer be legal after editing; refresh the active outfit.
+ if(state.profile && !hardOK(state.look,state.profile))produce();else refresh();
+}
+function downloadBackup(){const obj={schema:1,edits:tryParse(safeStore.get('atelier_sara_mobile_tags_v1'),{}),favorites};const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='ATELIER_SARA_backup.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200)}
+async function restoreBackup(file){try{const obj=JSON.parse(await file.text());if(obj.schema!==1||typeof obj.edits!=='object'||!Array.isArray(obj.favorites))throw Error('Backup non valido');safeStore.set('atelier_sara_mobile_tags_v1',JSON.stringify(obj.edits));safeStore.set('atelier_sara_mobile_faves_v1',JSON.stringify(obj.favorites));location.reload();}catch(e){toast('Backup non valido o non leggibile.')}}
+function syncControls(){$('#occasion').value=state.occasion;$('#season').value=state.season;$('#lookMode').value=state.mode;}
+function refresh(){renderLook();if(state.page==='closet')renderCloset()}
+
+$('#btnDressMe').addEventListener('click',produce);
+$('#saveBtn').addEventListener('click',saveCurrent);
+$('#occasion').addEventListener('change',e=>{state.occasion=e.target.value;state.hist=[];produce()});
+$('#season').addEventListener('change',e=>{state.season=e.target.value;state.hist=[];produce()});
+$('#lookMode').addEventListener('change',e=>{state.mode=e.target.value;state.hist=[];produce()});
+$$('[data-nav]').forEach(b=>b.onclick=()=>usePage(b.dataset.nav));
+$('#closetFilter').addEventListener('change',e=>{state.filter=e.target.value;renderCloset()});
+$('#closetSearch').addEventListener('input',e=>{state.query=e.target.value;renderCloset()});
+$('#dialogCategory').addEventListener('change',()=>populateSubtype(null));
+$('#editSave').addEventListener('click',e=>{e.preventDefault();storeEdit()});
+$('#editCancel').addEventListener('click',()=>$('#editor').close());
+$('#backupBtn').addEventListener('click',downloadBackup);
+$('#restoreFile').addEventListener('change',e=>{const f=e.target.files[0];if(f)restoreBackup(f)});
+$('#headerCount').textContent=data.length+' capi reali';
+syncControls();produce();
+</script>
+</body>
+</html>

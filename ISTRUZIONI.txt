@@ -1,0 +1,12 @@
+ATELIER SARA — PUBBLICAZIONE SEMPLICE
+
+1. Su PC, apri https://app.netlify.com/drop e accedi al tuo account Netlify.
+2. Trascina LA CARTELLA ATELIER_SARA_SITO_WEB nella zona di pubblicazione, oppure il file ZIP di questa cartella.
+3. Attendi la pubblicazione e copia il link https://....netlify.app
+4. Invia il LINK a Sara su WhatsApp (NON il file HTML).
+5. Sara apre il link in Safari > Condividi > Aggiungi alla schermata Home.
+
+ATTENZIONE: il link e le fotografie sono pubblicamente accessibili a chiunque conosca l'indirizzo. Non è una condivisione autenticata.
+Le modifiche ai tag e i preferiti restano salvati sul dispositivo: non si sincronizzano automaticamente tra telefoni.
+
+Le immagini sono conservate come file WebP separati, senza perdita ulteriore rispetto alla V3.
