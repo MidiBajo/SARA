@@ -1,0 +1,1683 @@
+{
+  "schema": 2,
+  "catalogVersion": "4.1",
+  "description": "Catalogo completo ATELIER SARA. Include le correzioni manuali del backup del 2 novembre 2026. Le fotografie sono in assets/.",
+  "catalog": [
+    {
+      "source": "CAMICE/IMG_0814.HEIC",
+      "id": "closet-0",
+      "name": "Camicia bianca classica",
+      "type": "top",
+      "subtype": "shirt",
+      "color": "bianco",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "popeline",
+        "maniche lunghe",
+        "colletto classico",
+        "elegante",
+        "versatile"
+      ],
+      "image": "assets/capo-000.webp",
+      "sourceFile": "IMG_0814.HEIC"
+    },
+    {
+      "source": "CAMICE/IMG_0815.HEIC",
+      "id": "closet-1",
+      "name": "Camicia blu a righe verticali",
+      "type": "top",
+      "subtype": "shirt",
+      "color": "blu",
+      "secondaryColor": "bianco",
+      "pattern": "Righe",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "riga sottile",
+        "colletto",
+        "classica",
+        "smart casual"
+      ],
+      "image": "assets/capo-001.webp",
+      "sourceFile": "IMG_0815.HEIC"
+    },
+    {
+      "source": "CAMICE/IMG_0873.HEIC",
+      "id": "closet-2",
+      "name": "Camicia a quadri marroni e panna",
+      "type": "top",
+      "subtype": "shirt",
+      "color": "marrone",
+      "secondaryColor": "avorio",
+      "pattern": "Quadri",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "flanella apparente",
+        "quadri grandi",
+        "casual"
+      ],
+      "image": "assets/capo-002.webp",
+      "sourceFile": "IMG_0873.HEIC"
+    },
+    {
+      "source": "CAMICE/IMG_0874.HEIC",
+      "id": "closet-3",
+      "name": "Camicia denim blu scuro",
+      "type": "top",
+      "subtype": "shirt",
+      "color": "denim",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "chambray",
+        "jeans",
+        "casual",
+        "maniche lunghe"
+      ],
+      "image": "assets/capo-003.webp",
+      "sourceFile": "IMG_0874.HEIC"
+    },
+    {
+      "source": "CAMICE/IMG_0875.HEIC",
+      "id": "closet-4",
+      "name": "Camicia azzurro polvere",
+      "type": "top",
+      "subtype": "shirt",
+      "color": "blu",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "azzurro",
+        "casual chic",
+        "colletto"
+      ],
+      "image": "assets/capo-004.webp",
+      "sourceFile": "IMG_0875.HEIC"
+    },
+    {
+      "source": "CAMICE/IMG_0876.HEIC",
+      "id": "closet-5",
+      "name": "Camicia rosa e bianca a righe",
+      "type": "top",
+      "subtype": "shirt",
+      "color": "rosa",
+      "secondaryColor": "bianco",
+      "pattern": "Righe",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "chiara",
+        "sottogiacca",
+        "colletto"
+      ],
+      "image": "assets/capo-005.webp",
+      "sourceFile": "IMG_0876.HEIC"
+    },
+    {
+      "source": "GIACCHE/IMG_0817.HEIC",
+      "id": "closet-6",
+      "name": "Blazer marrone scuro",
+      "type": "outer",
+      "subtype": "blazer",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "sartoriale",
+        "marrone cioccolato",
+        "doppiopetto apparente"
+      ],
+      "image": "assets/capo-006.webp",
+      "sourceFile": "IMG_0817.HEIC"
+    },
+    {
+      "source": "GIACCHE/IMG_0866.HEIC",
+      "id": "closet-7",
+      "name": "Blazer tortora a quadri",
+      "type": "outer",
+      "subtype": "blazer",
+      "color": "tortora",
+      "secondaryColor": "marrone",
+      "pattern": "Quadri",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "microfantasia",
+        "check",
+        "sartoriale"
+      ],
+      "image": "assets/capo-007.webp",
+      "sourceFile": "IMG_0866.HEIC"
+    },
+    {
+      "source": "GIACCHE/IMG_0867.HEIC",
+      "id": "closet-8",
+      "name": "Giacca corta color cuoio",
+      "type": "outer",
+      "subtype": "jacket",
+      "color": "cammello",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "color cuoio",
+        "giacca corta",
+        "camicia giacca",
+        "bottoni"
+      ],
+      "image": "assets/capo-008.webp",
+      "sourceFile": "IMG_0867.HEIC"
+    },
+    {
+      "source": "GIACCHE/IMG_0868.HEIC",
+      "id": "closet-9",
+      "name": "Blazer avorio",
+      "type": "outer",
+      "subtype": "blazer",
+      "color": "avorio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Elegante",
+      "tags": [
+        "chiaro",
+        "strutturato",
+        "elegante"
+      ],
+      "image": "assets/capo-009.webp",
+      "sourceFile": "IMG_0868.HEIC"
+    },
+    {
+      "source": "GIACCHE/IMG_0870.HEIC",
+      "id": "closet-10",
+      "name": "Blazer beige tortora a quadri",
+      "type": "outer",
+      "subtype": "blazer",
+      "color": "tortora",
+      "secondaryColor": null,
+      "pattern": "Quadri",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "taglio lungo",
+        "neutro",
+        "sartoriale"
+      ],
+      "image": "assets/capo-010.webp",
+      "sourceFile": "IMG_0870.HEIC"
+    },
+    {
+      "source": "GIACCHE/IMG_0871.HEIC",
+      "id": "closet-11",
+      "name": "Blazer lungo nero",
+      "type": "outer",
+      "subtype": "blazer",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "nero",
+        "lungo",
+        "sartoriale"
+      ],
+      "image": "assets/capo-011.webp",
+      "sourceFile": "IMG_0871.HEIC"
+    },
+    {
+      "source": "GIACCHE/IMG_0872.HEIC",
+      "id": "closet-12",
+      "name": "Giacca camicia a quadri",
+      "type": "outer",
+      "subtype": "overshirt",
+      "color": "nero",
+      "secondaryColor": "avorio",
+      "pattern": "Quadri",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "overshirt",
+        "pesante",
+        "quadri grandi"
+      ],
+      "image": "assets/capo-012.webp",
+      "sourceFile": "IMG_0872.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0818.HEIC",
+      "id": "closet-13",
+      "name": "Maglia dolcevita beige",
+      "type": "top",
+      "subtype": "turtleneck",
+      "color": "beige",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "aderente",
+        "collo alto",
+        "maglia leggera",
+        "sottogiacca"
+      ],
+      "image": "assets/capo-013.webp",
+      "sourceFile": "IMG_0818.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0819.HEIC",
+      "id": "closet-14",
+      "name": "Maglia bianca a maniche lunghe",
+      "type": "top",
+      "subtype": "longsleeve",
+      "color": "bianco",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "basic",
+        "maniche lunghe",
+        "semplice"
+      ],
+      "image": "assets/capo-014.webp",
+      "sourceFile": "IMG_0819.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0859.HEIC",
+      "id": "closet-15",
+      "name": "Maglia bordeaux a maniche lunghe",
+      "type": "top",
+      "subtype": "longsleeve",
+      "color": "bordeaux",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "basic",
+        "vinaccia",
+        "maglia leggera"
+      ],
+      "image": "assets/capo-015.webp",
+      "sourceFile": "IMG_0859.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0860.heic",
+      "id": "closet-16",
+      "name": "Maglia nera con bottoni ai polsi",
+      "type": "top",
+      "subtype": "longsleeve",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "girocollo",
+        "bottoni ai polsi",
+        "sottogiacca"
+      ],
+      "image": "assets/capo-016.webp",
+      "sourceFile": "IMG_0860.heic"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0861.heic",
+      "id": "closet-17",
+      "name": "Maglioncino dolcevita beige",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "beige",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "collo alto",
+        "chiaro"
+      ],
+      "image": "assets/capo-017.webp",
+      "sourceFile": "IMG_0861.heic"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0877.HEIC",
+      "id": "closet-18",
+      "name": "Dolcevita marrone cioccolato",
+      "type": "top",
+      "subtype": "turtleneck",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "collo alto",
+        "aderente",
+        "sottogiacca"
+      ],
+      "image": "assets/capo-018.webp",
+      "sourceFile": "IMG_0877.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0878.HEIC",
+      "id": "closet-19",
+      "name": "Dolcevita blu notte",
+      "type": "top",
+      "subtype": "turtleneck",
+      "color": "blu",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "blu scuro",
+        "collo alto",
+        "aderente"
+      ],
+      "image": "assets/capo-019.webp",
+      "sourceFile": "IMG_0878.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0879.HEIC",
+      "id": "closet-20",
+      "name": "Dolcevita nero",
+      "type": "top",
+      "subtype": "turtleneck",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "collo alto",
+        "aderente",
+        "elegante"
+      ],
+      "image": "assets/capo-020.webp",
+      "sourceFile": "IMG_0879.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0880.HEIC",
+      "id": "closet-21",
+      "name": "Maglia nera girocollo",
+      "type": "top",
+      "subtype": "longsleeve",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "semplice",
+        "basica",
+        "maniche lunghe"
+      ],
+      "image": "assets/capo-021.webp",
+      "sourceFile": "IMG_0880.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0881.HEIC",
+      "id": "closet-22",
+      "name": "Maglia bianca a collo alto",
+      "type": "top",
+      "subtype": "turtleneck",
+      "color": "bianco",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "collo alto",
+        "sottogiacca",
+        "chiara"
+      ],
+      "image": "assets/capo-022.webp",
+      "sourceFile": "IMG_0881.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0882.HEIC",
+      "id": "closet-23",
+      "name": "Dolcevita a righe nero e grigio",
+      "type": "top",
+      "subtype": "turtleneck",
+      "color": "nero",
+      "secondaryColor": "grigio",
+      "pattern": "Righe",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "righe sottili",
+        "collo alto",
+        "casual chic"
+      ],
+      "image": "assets/capo-023.webp",
+      "sourceFile": "IMG_0882.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0885.HEIC",
+      "id": "closet-24",
+      "name": "Maglia avorio girocollo",
+      "type": "top",
+      "subtype": "longsleeve",
+      "color": "avorio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "chiara",
+        "basica",
+        "sottogiacca"
+      ],
+      "image": "assets/capo-024.webp",
+      "sourceFile": "IMG_0885.HEIC"
+    },
+    {
+      "source": "MAGLIETTE/IMG_0886.HEIC",
+      "id": "closet-25",
+      "name": "Maglia grigio antracite",
+      "type": "top",
+      "subtype": "longsleeve",
+      "color": "antracite",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "girocollo",
+        "basica"
+      ],
+      "image": "assets/capo-025.webp",
+      "sourceFile": "IMG_0886.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0813.HEIC",
+      "id": "closet-26",
+      "name": "Maglione blu navy a trecce",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "blu",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "trecce",
+        "trama spessa",
+        "blu notte"
+      ],
+      "image": "assets/capo-026.webp",
+      "sourceFile": "IMG_0813.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0816.HEIC",
+      "id": "closet-27",
+      "name": "Maglione verde oliva",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "oliva",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "maglia lavorata",
+        "oliva",
+        "girocollo"
+      ],
+      "image": "assets/capo-027.webp",
+      "sourceFile": "IMG_0816.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0844.heic",
+      "id": "closet-28",
+      "name": "Maglione panna a righe blu",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "avorio",
+      "secondaryColor": "blu",
+      "pattern": "Righe",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "righe orizzontali",
+        "marinaro",
+        "maglia"
+      ],
+      "image": "assets/capo-028.webp",
+      "sourceFile": "IMG_0844.heic"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0845.heic",
+      "id": "closet-29",
+      "name": "Maglione avorio corto",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "avorio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "corto",
+        "girocollo",
+        "chiaro"
+      ],
+      "image": "assets/capo-029.webp",
+      "sourceFile": "IMG_0845.heic"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0846.heic",
+      "id": "closet-30",
+      "name": "Maglione blu notte",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "blu",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "blu navy",
+        "girocollo"
+      ],
+      "image": "assets/capo-030.webp",
+      "sourceFile": "IMG_0846.heic"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0847.heic",
+      "id": "closet-31",
+      "name": "Cardigan marrone con bottoni",
+      "type": "outer",
+      "subtype": "cardigan",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "bottoni",
+        "girocollo"
+      ],
+      "image": "assets/capo-031.webp",
+      "sourceFile": "IMG_0847.heic"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0848.HEIC",
+      "id": "closet-32",
+      "name": "Felpa avorio Coffee Time",
+      "type": "outer",
+      "subtype": "sweatshirt",
+      "color": "avorio",
+      "secondaryColor": "marrone",
+      "pattern": "Scritta",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "scritta",
+        "coffee time",
+        "sportivo",
+        "informale"
+      ],
+      "image": "assets/capo-032.webp",
+      "sourceFile": "IMG_0848.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0849.HEIC",
+      "id": "closet-33",
+      "name": "Maglione rosa antico a collo alto",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "rosa",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "rosa polvere",
+        "melange",
+        "collo alto"
+      ],
+      "image": "assets/capo-033.webp",
+      "sourceFile": "IMG_0849.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0850.HEIC",
+      "id": "closet-34",
+      "name": "Gilet in maglia a rombi",
+      "type": "outer",
+      "subtype": "vest",
+      "color": "avorio",
+      "secondaryColor": "nero",
+      "pattern": "Rombi",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "gilet senza maniche",
+        "argyle",
+        "sopra camicia"
+      ],
+      "image": "assets/capo-034.webp",
+      "sourceFile": "IMG_0850.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0851.HEIC",
+      "id": "closet-35",
+      "name": "Maglione marrone scuro",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "marrone cioccolato",
+        "girocollo"
+      ],
+      "image": "assets/capo-035.webp",
+      "sourceFile": "IMG_0851.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0853.HEIC",
+      "id": "closet-36",
+      "name": "Maglione marrone a righe beige",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "marrone",
+      "secondaryColor": "beige",
+      "pattern": "Righe",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "righe orizzontali"
+      ],
+      "image": "assets/capo-036.webp",
+      "sourceFile": "IMG_0853.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0854.heic",
+      "id": "closet-37",
+      "name": "Felpa marrone cioccolato",
+      "type": "outer",
+      "subtype": "sweatshirt",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "felpa",
+        "girocollo",
+        "informale"
+      ],
+      "image": "assets/capo-037.webp",
+      "sourceFile": "IMG_0854.heic"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0855.HEIC",
+      "id": "closet-38",
+      "name": "Maglione verde bosco con bottoni",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "verde",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "verde scuro",
+        "bottoni al collo"
+      ],
+      "image": "assets/capo-038.webp",
+      "sourceFile": "IMG_0855.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0856.HEIC",
+      "id": "closet-39",
+      "name": "Maglione nero a microfantasia bianca",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "nero",
+      "secondaryColor": "bianco",
+      "pattern": "Fantasia",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "microfantasia",
+        "contrasto",
+        "maglia"
+      ],
+      "image": "assets/capo-039.webp",
+      "sourceFile": "IMG_0856.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0857.heic",
+      "id": "closet-40",
+      "name": "Cardigan grigio chiaro",
+      "type": "outer",
+      "subtype": "cardigan",
+      "color": "grigio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "bottoni",
+        "chiaro"
+      ],
+      "image": "assets/capo-040.webp",
+      "sourceFile": "IMG_0857.heic"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0858.HEIC",
+      "id": "closet-41",
+      "name": "Maglione tortora lavorato",
+      "type": "outer",
+      "subtype": "knit",
+      "color": "tortora",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "trama morbida",
+        "melange",
+        "chiaro"
+      ],
+      "image": "assets/capo-041.webp",
+      "sourceFile": "IMG_0858.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0864.HEIC",
+      "id": "closet-42",
+      "name": "Cardigan verde salvia a bottoni",
+      "type": "outer",
+      "subtype": "cardigan",
+      "color": "oliva",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "salvia",
+        "bottoni grandi",
+        "tasche"
+      ],
+      "image": "assets/capo-042.webp",
+      "sourceFile": "IMG_0864.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0865.HEIC",
+      "id": "closet-43",
+      "name": "Cardigan panna a righe beige",
+      "type": "outer",
+      "subtype": "cardigan",
+      "color": "avorio",
+      "secondaryColor": "beige",
+      "pattern": "Righe",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "righe larghe",
+        "bottoni",
+        "caldo"
+      ],
+      "image": "assets/capo-043.webp",
+      "sourceFile": "IMG_0865.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0883.HEIC",
+      "id": "closet-44",
+      "name": "Cardigan blu con toppe ai gomiti",
+      "type": "outer",
+      "subtype": "cardigan",
+      "color": "blu",
+      "secondaryColor": "tortora",
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "lungo",
+        "bottoni",
+        "toppe",
+        "blu navy"
+      ],
+      "image": "assets/capo-044.webp",
+      "sourceFile": "IMG_0883.HEIC"
+    },
+    {
+      "source": "MAGLIONI_CARDIGAN/IMG_0884.HEIC",
+      "id": "closet-45",
+      "name": "Cardigan lungo beige chiaro",
+      "type": "outer",
+      "subtype": "coatigan",
+      "color": "beige",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "lungo",
+        "senza bottoni visibili",
+        "maglia pesante"
+      ],
+      "image": "assets/capo-045.webp",
+      "sourceFile": "IMG_0884.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/GONNE/IMG_0841.HEIC",
+      "id": "closet-46",
+      "name": "Gonna lunga nera a costine",
+      "type": "bottom",
+      "subtype": "skirt",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "lunga",
+        "a costine",
+        "bottoni laterali"
+      ],
+      "image": "assets/capo-046.webp",
+      "sourceFile": "IMG_0841.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/GONNE/IMG_0842.HEIC",
+      "id": "closet-47",
+      "name": "Gonna nera plissettata",
+      "type": "bottom",
+      "subtype": "skirt",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "lunga",
+        "plissettata",
+        "effetto pelle"
+      ],
+      "image": "assets/capo-047.webp",
+      "sourceFile": "IMG_0842.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0808.HEIC",
+      "id": "closet-48",
+      "name": "Jeans azzurro chiaro con risvolto",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "denim",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "lavaggio chiaro",
+        "risvolto",
+        "gamba larga"
+      ],
+      "image": "assets/capo-048.webp",
+      "sourceFile": "IMG_0808.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0810.HEIC",
+      "id": "closet-49",
+      "name": "Jeans blu indaco scuro",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "denim",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "lavaggio scuro",
+        "gamba ampia"
+      ],
+      "image": "assets/capo-049.webp",
+      "sourceFile": "IMG_0810.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0811.HEIC",
+      "id": "closet-50",
+      "name": "Jeans blu medio dritto",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "denim",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "lavaggio medio",
+        "gamba dritta"
+      ],
+      "image": "assets/capo-050.webp",
+      "sourceFile": "IMG_0811.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0824.HEIC",
+      "id": "closet-51",
+      "name": "Jeans grigio chiaro",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "grigio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "denim grigio",
+        "straight"
+      ],
+      "image": "assets/capo-051.webp",
+      "sourceFile": "IMG_0824.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0825.heic",
+      "id": "closet-52",
+      "name": "Jeans avorio chiaro",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "avorio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "denim chiaro",
+        "bianco panna"
+      ],
+      "image": "assets/capo-052.webp",
+      "sourceFile": "IMG_0825.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0826.heic",
+      "id": "closet-53",
+      "name": "Jeans bianco panna",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "bianco",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "denim chiaro",
+        "slim"
+      ],
+      "image": "assets/capo-053.webp",
+      "sourceFile": "IMG_0826.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0827.heic",
+      "id": "closet-54",
+      "name": "Jeans blu con risvolto",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "denim",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "blu medio",
+        "risvolto",
+        "gamba larga"
+      ],
+      "image": "assets/capo-054.webp",
+      "sourceFile": "IMG_0827.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0828.heic",
+      "id": "closet-55",
+      "name": "Jeans blu a gamba larga",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "denim",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "blu medio",
+        "wide leg"
+      ],
+      "image": "assets/capo-055.webp",
+      "sourceFile": "IMG_0828.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0829.heic",
+      "id": "closet-56",
+      "name": "Jeans grigio scuro",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "antracite",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "denim antracite",
+        "lavaggio scuro"
+      ],
+      "image": "assets/capo-056.webp",
+      "sourceFile": "IMG_0829.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0830.heic",
+      "id": "closet-57",
+      "name": "Jeans nero slavato",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "antracite",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "denim grigio nero",
+        "gamba dritta"
+      ],
+      "image": "assets/capo-057.webp",
+      "sourceFile": "IMG_0830.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0831.heic",
+      "id": "closet-58",
+      "name": "Jeans nero",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "nero",
+        "slim"
+      ],
+      "image": "assets/capo-058.webp",
+      "sourceFile": "IMG_0831.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0832.heic",
+      "id": "closet-59",
+      "name": "Jeans verde oliva scuro",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "oliva",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "denim oliva",
+        "scuro",
+        "gamba ampia"
+      ],
+      "image": "assets/capo-059.webp",
+      "sourceFile": "IMG_0832.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/JEANS/IMG_0833.heic",
+      "id": "closet-60",
+      "name": "Jeans grigio chiarissimo",
+      "type": "bottom",
+      "subtype": "jeans",
+      "color": "grigio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "lavaggio grigio chiaro",
+        "slim"
+      ],
+      "image": "assets/capo-060.webp",
+      "sourceFile": "IMG_0833.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0812.HEIC",
+      "id": "closet-61",
+      "name": "Pantaloni neri sartoriali",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "pinces",
+        "gamba stretta",
+        "elegante"
+      ],
+      "image": "assets/capo-061.webp",
+      "sourceFile": "IMG_0812.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0834.heic",
+      "id": "closet-62",
+      "name": "Pantaloni neri a righe sottili",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "nero",
+      "secondaryColor": "grigio",
+      "pattern": "Righe",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "gessato",
+        "palazzo",
+        "gamba ampia"
+      ],
+      "image": "assets/capo-062.webp",
+      "sourceFile": "IMG_0834.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0835.heic",
+      "id": "closet-63",
+      "name": "Pantaloni marrone cioccolato",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "pinces",
+        "palazzo",
+        "gamba ampia"
+      ],
+      "image": "assets/capo-063.webp",
+      "sourceFile": "IMG_0835.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0836.HEIC",
+      "id": "closet-64",
+      "name": "Pantaloni tortora chiaro",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "tortora",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "palazzo",
+        "ampi",
+        "neutri"
+      ],
+      "image": "assets/capo-064.webp",
+      "sourceFile": "IMG_0836.HEIC"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0837.heic",
+      "id": "closet-65",
+      "name": "Pantaloni marroni sartoriali",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "palazzo",
+        "ampi",
+        "pinces"
+      ],
+      "image": "assets/capo-065.webp",
+      "sourceFile": "IMG_0837.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0838.heic",
+      "id": "closet-66",
+      "name": "Pantaloni grigi a gamba larga",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "grigio",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "gamba larga"
+      ],
+      "image": "assets/capo-066.webp",
+      "sourceFile": "IMG_0838.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0839.heic",
+      "id": "closet-67",
+      "name": "Pantaloni neri a pinces",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "gamba ampia",
+        "pinces",
+        "elegante"
+      ],
+      "image": "assets/capo-067.webp",
+      "sourceFile": "IMG_0839.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0840.heic",
+      "id": "closet-68",
+      "name": "Pantaloni neri plissettati",
+      "type": "bottom",
+      "subtype": "tailored",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Tutte",
+      "occasion": "Ufficio",
+      "tags": [
+        "palazzo",
+        "plissé",
+        "cintura oro"
+      ],
+      "image": "assets/capo-068.webp",
+      "sourceFile": "IMG_0840.heic"
+    },
+    {
+      "source": "PANTALONI_JEANS_GONNE/PANTALONI/IMG_0843.HEIC",
+      "id": "closet-69",
+      "name": "Pantaloni marroni a coste",
+      "type": "bottom",
+      "subtype": "corduroy",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "velluto a coste apparente",
+        "marrone scuro",
+        "gamba svasata"
+      ],
+      "image": "assets/capo-069.webp",
+      "sourceFile": "IMG_0843.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0887.HEIC",
+      "id": "closet-70",
+      "name": "Sneakers Adidas verde scuro",
+      "type": "shoes",
+      "subtype": "sneakers",
+      "color": "verde",
+      "secondaryColor": "bianco",
+      "pattern": "Logo / dettagli",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "verde petrolio",
+        "strisce bianche",
+        "basse"
+      ],
+      "image": "assets/capo-070.webp",
+      "sourceFile": "IMG_0887.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0888.HEIC",
+      "id": "closet-71",
+      "name": "Sneakers bianche con dettagli rosa",
+      "type": "shoes",
+      "subtype": "sneakers",
+      "color": "bianco",
+      "secondaryColor": "rosa",
+      "pattern": "Logo / dettagli",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "suola chunky",
+        "bianco crema",
+        "rosa"
+      ],
+      "image": "assets/capo-071.webp",
+      "sourceFile": "IMG_0888.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0889.HEIC",
+      "id": "closet-72",
+      "name": "Sneakers bianche con dettagli verdi",
+      "type": "shoes",
+      "subtype": "sneakers",
+      "color": "bianco",
+      "secondaryColor": "verde",
+      "pattern": "Logo / dettagli",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "bianco",
+        "verde",
+        "basiche"
+      ],
+      "image": "assets/capo-072.webp",
+      "sourceFile": "IMG_0889.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0900.HEIC",
+      "id": "closet-73",
+      "name": "Sneakers grigio tortora con giallo",
+      "type": "shoes",
+      "subtype": "sneakers",
+      "color": "tortora",
+      "secondaryColor": "giallo",
+      "pattern": "Logo / dettagli",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "grigio taupe",
+        "accento giallo"
+      ],
+      "image": "assets/capo-073.webp",
+      "sourceFile": "IMG_0900.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0901.HEIC",
+      "id": "closet-74",
+      "name": "Sneakers marrone con inserti crema",
+      "type": "shoes",
+      "subtype": "sneakers",
+      "color": "marrone",
+      "secondaryColor": "avorio",
+      "pattern": "Logo / dettagli",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "marrone cioccolato",
+        "strisce crema",
+        "basse"
+      ],
+      "image": "assets/capo-074.webp",
+      "sourceFile": "IMG_0901.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0902.HEIC",
+      "id": "closet-75",
+      "name": "Sneakers Nike bianche",
+      "type": "shoes",
+      "subtype": "sneakers",
+      "color": "bianco",
+      "secondaryColor": null,
+      "pattern": "Logo / dettagli",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "total white",
+        "basse",
+        "bianco"
+      ],
+      "image": "assets/capo-075.webp",
+      "sourceFile": "IMG_0902.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/SNEAKERS/IMG_0903.HEIC",
+      "id": "closet-76",
+      "name": "Sneakers Nike bianco ghiaccio",
+      "type": "shoes",
+      "subtype": "sneakers",
+      "color": "bianco",
+      "secondaryColor": "altro",
+      "pattern": "Logo / dettagli",
+      "season": "Tutte",
+      "occasion": "Casual",
+      "tags": [
+        "bianco",
+        "basse",
+        "azzurro"
+      ],
+      "image": "assets/capo-076.webp",
+      "sourceFile": "IMG_0903.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0890.HEIC",
+      "id": "closet-77",
+      "name": "Anfibi neri stringati",
+      "type": "shoes",
+      "subtype": "combatboots",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "anfibi",
+        "lacci",
+        "suola robusta"
+      ],
+      "image": "assets/capo-077.webp",
+      "sourceFile": "IMG_0890.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0891.HEIC",
+      "id": "closet-78",
+      "name": "Anfibi neri con cerniera",
+      "type": "shoes",
+      "subtype": "combatboots",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "anfibi",
+        "zip laterale",
+        "lacci"
+      ],
+      "image": "assets/capo-078.webp",
+      "sourceFile": "IMG_0891.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0892.HEIC",
+      "id": "closet-79",
+      "name": "Stivaletti neri con tacco",
+      "type": "shoes",
+      "subtype": "ankleboots",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "tacco largo",
+        "alla caviglia"
+      ],
+      "image": "assets/capo-079.webp",
+      "sourceFile": "IMG_0892.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0893.HEIC",
+      "id": "closet-80",
+      "name": "Stivaletti neri Chelsea",
+      "type": "shoes",
+      "subtype": "ankleboots",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Ufficio",
+      "tags": [
+        "chelsea",
+        "elastico",
+        "suola spessa"
+      ],
+      "image": "assets/capo-080.webp",
+      "sourceFile": "IMG_0893.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0894.HEIC",
+      "id": "closet-81",
+      "name": "Stivali alti marrone pelle",
+      "type": "shoes",
+      "subtype": "kneeboots",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "al ginocchio",
+        "marrone scuro",
+        "pelle apparente"
+      ],
+      "image": "assets/capo-081.webp",
+      "sourceFile": "IMG_0894.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0895.HEIC",
+      "id": "closet-82",
+      "name": "Stivaletti neri scamosciati",
+      "type": "shoes",
+      "subtype": "ankleboots",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "tacco basso",
+        "effetto camoscio"
+      ],
+      "image": "assets/capo-082.webp",
+      "sourceFile": "IMG_0895.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0896.HEIC",
+      "id": "closet-83",
+      "name": "Stivaletti neri con tacco largo",
+      "type": "shoes",
+      "subtype": "ankleboots",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "tacco a blocco",
+        "alla caviglia"
+      ],
+      "image": "assets/capo-083.webp",
+      "sourceFile": "IMG_0896.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0897.HEIC",
+      "id": "closet-84",
+      "name": "Stivali alti marrone cioccolato",
+      "type": "shoes",
+      "subtype": "kneeboots",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "alti",
+        "scamosciati",
+        "robusti"
+      ],
+      "image": "assets/capo-084.webp",
+      "sourceFile": "IMG_0897.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0898.HEIC",
+      "id": "closet-85",
+      "name": "Stivaletti invernali marroni imbottiti",
+      "type": "shoes",
+      "subtype": "winterboots",
+      "color": "marrone",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Casual",
+      "tags": [
+        "pelo",
+        "imbottiti",
+        "invernali",
+        "casual"
+      ],
+      "image": "assets/capo-085.webp",
+      "sourceFile": "IMG_0898.HEIC"
+    },
+    {
+      "source": "SCARPE_SNEAKERS_STIVALI/STIVALI/IMG_0899.HEIC",
+      "id": "closet-86",
+      "name": "Stivali alti neri con tacco",
+      "type": "shoes",
+      "subtype": "kneeboots",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "al ginocchio",
+        "tacco largo",
+        "pelle apparente"
+      ],
+      "image": "assets/capo-086.webp",
+      "sourceFile": "IMG_0899.HEIC"
+    },
+    {
+      "source": "VESTITO LUNGO IN MAGLIA/IMG_0862.heic",
+      "id": "closet-87",
+      "name": "Vestito lungo in maglia beige",
+      "type": "dress",
+      "subtype": "dress",
+      "color": "beige",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "abito in maglia",
+        "lungo",
+        "collo alto",
+        "aderente"
+      ],
+      "image": "assets/capo-087.webp",
+      "sourceFile": "IMG_0862.heic"
+    },
+    {
+      "source": "VESTITO LUNGO IN MAGLIA/IMG_0863.heic",
+      "id": "closet-88",
+      "name": "Vestito lungo in maglia nero",
+      "type": "dress",
+      "subtype": "dress",
+      "color": "nero",
+      "secondaryColor": null,
+      "pattern": "Tinta unita",
+      "season": "Autunno/Inverno",
+      "occasion": "Elegante",
+      "tags": [
+        "abito in maglia",
+        "collo alto",
+        "aderente"
+      ],
+      "image": "assets/capo-088.webp",
+      "sourceFile": "IMG_0863.heic"
+    }
+  ]
+}

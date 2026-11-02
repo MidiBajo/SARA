@@ -1,0 +1,23 @@
+ATELIER SARA — VERSIONE 4.1
+
+Questa versione incorpora nel catalogo base le 16 correzioni del backup di Sara,
+conservando tutte le 89 fotografie esistenti. Un capo (IMG_0861.heic) è
+passato da Top a Maglioni/Giacche.
+
+PER GITHUB PAGES:
+1. Estrai tutto il contenuto dello ZIP.
+2. Carica sullo stesso repository TUTTI i file (index.html, assets/, icone, manifest, catalogo_master.json).
+3. Mantieni index.html nella cartella principale.
+4. Se il sito mostra la versione precedente, in Safari ricarica la pagina o chiudi e riapri il sito dalla schermata Home.
+
+IMPORTANTISSIMO — BACKUP:
+Il tasto Esporta backup ora genera ATELIER_SARA_backup_completo.json, con le
+schede di TUTTI i capi, anche quelli non modificati. Questo rende future
+migrazioni indipendenti dalle versioni precedenti del software.
+Continua a funzionare anche Importa backup per i file della V4 (schema 1).
+
+CATALOGO_MASTER.JSON: schede di tutti gli 89 capi, senza foto (le immagini
+restano nella cartella assets). Conservane una copia come riferimento.
+
+Nota: le correzioni effettuate in futuro nell'app non si sincronizzano da sole
+con GitHub: esporta il backup e comunicamelo per integrarle nella prossima release.
