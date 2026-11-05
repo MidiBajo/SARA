@@ -1,23 +1,37 @@
-ATELIER SARA — VERSIONE 4.1
+ATELIER SARA — VERSIONE 5.0 (iPhone)
 
-Questa versione incorpora nel catalogo base le 16 correzioni del backup di Sara,
-conservando tutte le 89 fotografie esistenti. Un capo (IMG_0861.heic) è
-passato da Top a Maglioni/Giacche.
+Novità richieste da Sara:
+1. Su ogni fotografia della pagina VESTIMI compare il quadratino "Blocca".
+   Se lo selezioni, quel capo resta fisso ai successivi clic su VESTIMI;
+   cambiano soltanto i capi non bloccati, rispettando le regole di abbinamento.
+   Le frecce del capo bloccato sono disabilitate fino allo sblocco.
+2. La pagina VESTIMI apre direttamente le quattro fotografie, senza intestazioni
+   e banner che costringono a scorrere.
+3. VESTIMI è ora il grande pulsante viola rotondo al CENTRO della barra fissa
+   inferiore, tra Guardaroba e Preferiti. Lo puoi premere in qualsiasi momento.
+4. In alto a destra della pagina VESTIMI ci sono solo due icone:
+   filtri (per occasione, stagione e tipo di look) e cuore (salva nei preferiti).
 
-PER GITHUB PAGES:
-1. Estrai tutto il contenuto dello ZIP.
-2. Carica sullo stesso repository TUTTI i file (index.html, assets/, icone, manifest, catalogo_master.json).
-3. Mantieni index.html nella cartella principale.
-4. Se il sito mostra la versione precedente, in Safari ricarica la pagina o chiudi e riapri il sito dalla schermata Home.
+I blocchi valgono durante la sessione corrente; dopo ricaricamento della pagina
+ripartono sbloccati. Se tutti i capi sono bloccati, premi VESTIMI senza
+modificarli: l'app avvisa che occorre sbloccarne almeno uno.
+Se vuoi usare la modalità Vestito mentre hai bloccato un top/pantalone,
+sblocca prima quel capo. Filtri incompatibili sono annullati automaticamente.
+Aprendo un outfit dai Preferiti, i blocchi vengono rimossi.
 
-IMPORTANTISSIMO — BACKUP:
-Il tasto Esporta backup ora genera ATELIER_SARA_backup_completo.json, con le
-schede di TUTTI i capi, anche quelli non modificati. Questo rende future
-migrazioni indipendenti dalle versioni precedenti del software.
-Continua a funzionare anche Importa backup per i file della V4 (schema 1).
+Sono rimasti invariati:
+- tutte le 89 fotografie e la loro posizione nella cartella assets;
+- catalogo di Sara e 16 correzioni già integrate;
+- classificazione maglioni/cardigan assieme alle giacche;
+- algoritmo di abbinamento, regole di compatibilità e frecce;
+- ingrandimento fotografie, preferiti, editor dei tag e backup JSON.
 
-CATALOGO_MASTER.JSON: schede di tutti gli 89 capi, senza foto (le immagini
-restano nella cartella assets). Conservane una copia come riferimento.
+PER AGGIORNARE GITHUB PAGES:
+1. Estrai lo ZIP sul PC.
+2. Nel repository SARA carica TUTTI i file e la cartella assets mantenendo i percorsi.
+3. L'index.html deve rimanere nella radice del repository.
+4. Conferma il commit, quindi ricarica il sito dall'iPhone (se serve chiudi
+   e riapri la web app). Non cambiare il link GitHub Pages esistente.
 
-Nota: le correzioni effettuate in futuro nell'app non si sincronizzano da sole
-con GitHub: esporta il backup e comunicamelo per integrarle nella prossima release.
+ATTENZIONE: modifiche ai tag fatte su iPhone si salvano localmente nello stesso
+browser/sito. Prima di migrare tra telefoni, usa Guardaroba > Esporta backup.
