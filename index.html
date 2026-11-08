@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f9f5f2">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<title>ATELIER SARA · Versione 5</title>
+<title>ATELIER SARA · Versione 5.1</title>
 <style>
 :root{--ink:#302a31;--muted:#887c86;--primary:#743f59;--primary-light:#f4eaf0;--stroke:#eadfe4;--bg:#f9f5f2;--card:#fff;--soft:#f3eeeb;--shadow:0 12px 36px rgba(48,33,42,.06);--radius:20px}
 *{box-sizing:border-box}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-size:15px;-webkit-tap-highlight-color:transparent}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.35}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bd9aaf;outline-offset:2px}img{display:block;max-width:100%}button{border:0}a{color:var(--primary)}
@@ -116,6 +116,15 @@ body.look-page .app{padding-top:9px}
 }
 @media(max-width:365px){#page-look .garment-photo{aspect-ratio:4/4.2}.garment-lock .lock-label{font-size:8px}}
 
+
+/* V5.1 — due azioni affiancate nel Guardaroba: tag e indossa con blocco. */
+.tile-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;margin-top:auto;padding-top:10px;width:100%}
+.tile-actions button{width:100%;min-width:0;min-height:43px;border-radius:11px;font-weight:800;line-height:1.2;padding:9px 4px;font-size:11px;white-space:normal;overflow-wrap:normal}
+.tile-actions .tile-edit{margin:0;align-self:stretch}
+.tile-wear{background:var(--primary);color:#fff;border:1px solid #6a3950}
+.tile-wear:hover,.tile-wear:focus-visible{background:#8d526e}
+@media(max-width:750px){.tile-actions{gap:5px}.tile-actions button{font-size:10px;min-height:44px;padding:7px 2px}}
+@media(max-width:350px){.tile-actions button{font-size:9px}}
 </style>
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png">
@@ -156,7 +165,7 @@ body.look-page .app{padding-top:9px}
 </section>
 <section id="page-closet" class="page" hidden>
  <div class="section-top"><div><span class="eyebrow">ARCHIVIO REALE</span><h2>Il guardaroba</h2></div><small id="closetCount">89 capi</small></div>
- <p class="intro">Tocca una fotografia per ingrandirla. Usa “Modifica tag” per correggere la scheda del capo; le modifiche restano su questo dispositivo.</p>
+ <p class="intro">Tocca una fotografia per ingrandirla. Usa “🔒 Abbina” per partire da un capo bloccato su VESTIMI, oppure “✎ Tag” per correggere la sua scheda.</p>
  <div class="closet-controls"><input id="closetSearch" type="search" placeholder="Cerca un capo…" aria-label="Cerca un capo"><select id="closetFilter" aria-label="Filtra per categoria"><option value="all">Tutte</option><option value="top">Maglie / camicie</option><option value="bottom">Pantaloni / gonne</option><option value="outer">Maglioni / giacche</option><option value="shoes">Scarpe</option><option value="dress">Vestiti</option></select></div>
  <div id="closetGrid" class="closet-grid"></div>
  <div class="backup"><p><strong>Backup completo dei 89 capi e dei preferiti.</strong> Utile quando cambi iPhone o usi una nuova versione dell'app. Le fotografie sono conservate nella cartella assets/.</p><button id="backupBtn" class="btn btn-secondary">Esporta backup</button><label class="restore-label">Importa backup <input id="restoreFile" type="file" accept="application/json,.json"></label></div>
@@ -467,11 +476,50 @@ function renderLook(){
  });
 }
 function usePage(page){state.page=page;document.body.classList.toggle('look-page',page==='look');$$('[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===page));$$('.page').forEach(el=>el.hidden=el.id!==`page-${page}`);window.scrollTo({top:0,behavior:'instant'});if(page==='closet')renderCloset();if(page==='saved')renderSaved()}
+/** V5.1 — dal Guardaroba alla schermata VESTIMI con un capo obbligatorio.
+ *  Si azzerano SOLO i lucchetti temporanei del look corrente: preferiti,
+ *  tag e backup restano intatti. L'algoritmo storico rimane invariato.
+ */
+function wearFromCloset(id){
+ const it=find(id);
+ if(!it || !Object.prototype.hasOwnProperty.call(state.locked,it.type))return;
+ // Un capo selezionato diventa il nuovo punto di partenza (non si sommano vecchi vincoli invisibili).
+ Object.keys(state.locked).forEach(k=>state.locked[k]=false);
+ state.look={top:null,bottom:null,outer:null,shoes:null,dress:null};
+ state.look[it.type]=it.id;
+ state.locked[it.type]=true;
+ state.profile='';state.poolCache={};state.hist=[];state.lastProfile=null;
+ // Un abito richiede una composizione diversa da pantaloni/top.
+ state.mode=it.type==='dress'?'dress':'separates';
+ // Evita che il vecchio filtro stagionale escluda il capo scelto.
+ if(!seasonOK(it))state.season=it.season==='Tutte'?'Tutte':it.season;
+ syncControls();
+ usePage('look');
+ let ok=produce();
+ // Se il filtro precedente non ha abbinamenti, allarga solo l'occasione,
+ // senza mai togliere il blocco o forzare una combinazione vietata.
+ if(!ok&&state.occasion!=='Tutte'){
+   state.occasion='Tutte';syncControls();ok=produce();
+ }
+ if(!ok&&state.season!=='Tutte'){
+   state.season='Tutte';syncControls();ok=produce();
+ }
+ if(ok){toast('🔒 '+it.name+' bloccato. Premi VESTIMI per cambiare gli altri capi.');}
+ else{
+   // Se davvero non ci sono abbinamenti validi, lascia il capo bloccato
+   // come scelta esplicita, non sostituirlo arbitrariamente.
+   $('#lookStatus').hidden=false;
+   $('#lookStatus').textContent='🔒 '+it.name+' selezionato. Non sono disponibili combinazioni compatibili con gli altri capi. Prova a modificare i filtri.';
+   toast('Capo bloccato: nessun look compatibile trovato.');
+ }
+}
 function renderCloset(){
  const q=state.query.toLowerCase();const list=data.filter(it=>(state.filter==='all'||it.type===state.filter)&&(!q||[it.name,it.source,it.color,it.secondaryColor,it.subtype,...(it.tags||[])].join(' ').toLowerCase().includes(q)));
  $('#closetCount').textContent=list.length+' capi';
- $('#closetGrid').innerHTML=list.map(it=>`<article class="closet-tile"><button type="button" class="closet-photo-btn" data-zoom="${it.id}" aria-label="Ingrandisci ${clean(it.name)}"><span class="closet-thumb"><img src="${it.image}" loading="lazy" alt="${clean(it.name)}"></span></button><div class="closet-meta"><strong>${clean(it.name)}</strong><small>${SUBTYPES[it.subtype]||CATEGORIES[it.type]} · ${clean(it.color)}</small><button type="button" class="tile-edit" data-edit="${it.id}">✎ Modifica tag</button></div></article>`).join('')||'<p class="empty">Nessun capo trovato.</p>';
- $$('#closetGrid [data-edit]').forEach(b=>b.onclick=()=>editItem(b.dataset.edit));attachZoomClicks($('#closetGrid'));
+ $('#closetGrid').innerHTML=list.map(it=>`<article class="closet-tile"><button type="button" class="closet-photo-btn" data-zoom="${it.id}" aria-label="Ingrandisci ${clean(it.name)}"><span class="closet-thumb"><img src="${it.image}" loading="lazy" alt="${clean(it.name)}"></span></button><div class="closet-meta"><strong>${clean(it.name)}</strong><small>${SUBTYPES[it.subtype]||CATEGORIES[it.type]} · ${clean(it.color)}</small><div class="tile-actions"><button type="button" class="tile-edit" data-edit="${it.id}" aria-label="Modifica tag di ${clean(it.name)}">✎ Tag</button><button type="button" class="tile-wear" data-wear="${it.id}" aria-label="Abbina ${clean(it.name)} e bloccalo in VESTIMI">🔒 Abbina</button></div></div></article>`).join('')||'<p class="empty">Nessun capo trovato.</p>';
+ $$('#closetGrid [data-edit]').forEach(b=>b.onclick=()=>editItem(b.dataset.edit));
+ $$('#closetGrid [data-wear]').forEach(b=>b.onclick=()=>wearFromCloset(b.dataset.wear));
+ attachZoomClicks($('#closetGrid'));
 }
 function renderSaved(){
  $('#savedCount').textContent=favorites.length+' look';
